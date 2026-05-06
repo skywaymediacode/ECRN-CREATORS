@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<meta name="theme-color" content="#000000" />
+<title>ECRN — Become the Face of ECRN | Tampa Bay Creator Casting Call</title>
+<meta name="description" content="ECRN is hiring a bold local creator in Tampa Bay to become the face of a new referral network brand. Real commission upside on every placement." />
+<meta property="og:title" content="Become the Face of ECRN" />
+<meta property="og:description" content="Tampa Bay Creator Casting Call. Long-term role with real commission upside." />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary_large_image" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2322c55e'/%3E%3Cpath d='M30 32h40v9H40v9h25v9H40v9h30v9H30z' fill='%23000'/%3E%3C/svg%3E" />
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+
+<style>
+  html,body { background:#000; overflow-x:hidden; }
+  body { font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; -webkit-text-size-adjust:100%; color:#fff; }
+  input, select, textarea { font-size:16px; }
+  #splash {
+    position: fixed; inset: 0; background:#000;
+    display:flex; align-items:center; justify-content:center;
+    z-index:9999; transition: opacity .35s ease;
+  }
+  #splash.hide { opacity:0; pointer-events:none; }
+  .splash-logo {
+    height:56px; width:56px; border-radius:18px;
+    background: linear-gradient(135deg, #86efac, #22c55e 50%, #047857);
+    box-shadow: 0 0 40px rgba(34,197,94,.45);
+    display:flex; align-items:center; justify-content:center;
+    animation: pulse 1.4s ease-in-out infinite;
+  }
+  .splash-logo::after {
+    content:""; height:18px; width:18px; border-radius:50%;
+    background:#000; opacity:.85;
+  }
+  @keyframes pulse {
+    0%,100% { transform: scale(1);   opacity:1; }
+    50%     { transform: scale(.92); opacity:.7; }
+  }
+</style>
+</head>
+<body>
+<div id="splash"><div class="splash-logo"></div></div>
+<div id="root"></div>
+
+<script src="./app.js"></script>
+<script>
+  requestAnimationFrame(function () {
+    var s = document.getElementById('splash');
+    if (s) { s.classList.add('hide'); setTimeout(function(){ s.remove(); }, 400); }
+  });
+</script>
+</body>
+</html>
