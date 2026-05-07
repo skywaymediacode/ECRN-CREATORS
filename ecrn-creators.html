@@ -416,6 +416,71 @@ var obs=new IntersectionObserver(function(en){
   en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);}});
 },{threshold:0.08,rootMargin:'0px 0px -36px 0px'});
 els.forEach(function(el){obs.observe(el);});
+
+// GHL webhook form submission
+document.querySelector('.bsub').addEventListener('click', function() {
+  var btn = this;
+  var form = document.querySelector('.aform');
+
+  var fullName = form.querySelector('input[type="text"]').value.trim();
+  var nameParts = fullName.split(' ');
+  var firstName = nameParts[0] || '';
+  var lastName = nameParts.slice(1).join(' ') || '';
+  var phone = form.querySelector('input[type="tel"]').value.trim();
+  var email = form.querySelector('input[type="email"]').value.trim();
+  var inputs = form.querySelectorAll('input[type="text"]');
+  var city = inputs[1] ? inputs[1].value.trim() : '';
+  var urlInputs = form.querySelectorAll('input[type="url"]');
+  var instagram = urlInputs[0] ? urlInputs[0].value.trim() : '';
+  var tiktok = urlInputs[1] ? urlInputs[1].value.trim() : '';
+  var selects = form.querySelectorAll('select');
+  var bilingual = selects[0] ? selects[0].value : '';
+  var canEdit = selects[1] ? selects[1].value : '';
+  var adFamiliarity = selects[2] ? selects[2].value : '';
+  var whyFit = form.querySelector('textarea').value.trim();
+
+  if (!firstName || !email || !phone) {
+    alert('Please fill in your name, email, and phone before submitting.');
+    return;
+  }
+
+  btn.textContent = 'Submitting...';
+  btn.disabled = true;
+
+  var payload = {
+    firstName: firstName,
+    lastName: lastName,
+    name: fullName,
+    phone: phone,
+    email: email,
+    city: city,
+    instagram: instagram,
+    tiktok: tiktok,
+    bilingual: bilingual,
+    canEditVideos: canEdit,
+    adFamiliarity: adFamiliarity,
+    whyFit: whyFit,
+    source: 'ECRN Creators Landing Page'
+  };
+
+  fetch('https://services.leadconnectorhq.com/hooks/7OQ0NuvNtfSL8r6AcNGa/webhook-trigger/a6f53e61-8e35-44db-8f83-d4291fe282e2', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  })
+  .then(function() {
+    form.innerHTML = '<div style="text-align:center;padding:60px 20px">'
+      + '<div style="font-size:48px;margin-bottom:16px">✅</div>'
+      + '<div style="font-weight:900;font-size:26px;margin-bottom:12px">Application Received</div>'
+      + '<p style="font-weight:300;font-size:16px;color:rgba(255,255,255,.6);line-height:1.7">Thanks ' + firstName + ' — we\'ll review your profile and reach out if you\'re a fit.</p>'
+      + '</div>';
+  })
+  .catch(function() {
+    btn.textContent = 'Submit Application';
+    btn.disabled = false;
+    alert('Something went wrong. Please try again.');
+  });
+});
 </script>
 </body>
 </html>
