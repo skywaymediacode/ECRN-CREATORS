@@ -1,955 +1,504 @@
-​<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ECRN - Power Your Connections | Electrical Construction Referral Network</title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>ECRN — Become the Face of ECRN | Tampa Bay Creator Casting Call</title>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1197653738947055');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1197653738947055&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+<meta name="description" content="ECRN is hiring a bold local creator in Tampa Bay to become the face of a new referral network brand. Real commission upside on every placement."/>
+<link rel="icon" href="https://deltaconstructionpartners.com/wp-content/uploads/2026/03/ECRN-Icon-Only.png"/>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --green:      #43c970;
-    --green-dark: #038261;
-    --green-light:#abef9a;
-    --green-pale: #c6e9bd;
-    --black:      #000000;
-    --white:      #ffffff;
-    --gray-1:     #111111;
-    --gray-2:     #1a1a1a;
-    --gray-3:     #222222;
-    --gray-text:  #aaaaaa;
-  }
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: 'Lato', sans-serif;
-    font-weight: 400;
-    background: var(--black);
-    color: var(--white);
-    overflow-x: hidden;
-    line-height: 1.6;
-  }
-  body::before {
-    content: '';
-    position: fixed; inset: 0;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
-    pointer-events: none; z-index: 9999; opacity: 0.4;
-  }
-
-  /* ── UTIL ── */
-  .container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
-  .green { color: var(--green); }
-  .section-label {
-    font-weight: 700; font-size: 11px; letter-spacing: 0.22em;
-    text-transform: uppercase; color: var(--green);
-    display: flex; align-items: center; gap: 12px; margin-bottom: 22px;
-  }
-  .section-label::before { content: ''; width: 28px; height: 2px; background: var(--green); flex-shrink: 0; }
-
-  /* ── ANIMATIONS ── */
-  @keyframes fadeUp  { from { opacity:0; transform:translateY(32px); } to { opacity:1; transform:translateY(0); } }
-  @keyframes fadeIn  { from { opacity:0; } to { opacity:1; } }
-  @keyframes pulse   { 0%,100% { box-shadow:0 0 0 0 rgba(67,201,112,.4); } 50% { box-shadow:0 0 0 14px rgba(67,201,112,0); } }
-  @keyframes countUp { from { opacity:0; transform:scale(.85); } to { opacity:1; transform:scale(1); } }
-  .reveal { opacity:1; transform:translateY(0); transition:opacity .75s ease, transform .75s ease; }
-  .js-reveal { opacity:0; transform:translateY(28px); }
-  .js-reveal.visible { opacity:1; transform:translateY(0); }
-
-  /* ══ NAV ══ */
-  nav {
-    position: fixed; top:0; left:0; right:0; z-index:200;
-    height: 100px; padding: 0 40px;
-    display: grid; grid-template-columns: auto 1fr auto; align-items: center;
-    background: rgba(0,0,0,.88); backdrop-filter: blur(18px);
-    border-bottom: 1px solid rgba(67,201,112,.1);
-    transition: border-color .3s, box-shadow .3s;
-  }
-  nav.scrolled { border-bottom-color: rgba(67,201,112,.22); box-shadow: 0 6px 40px rgba(0,0,0,.65); }
-  .nav-left { display:flex; align-items:center; gap:14px; }
-  .nav-left a img { height: 68px; display: block; width: auto; }
-  .nav-links { display:flex; align-items:center; justify-content:center; gap:36px; list-style:none; margin:0; padding:0; }
-  .nav-links li { display:flex; align-items:center; }
-  .nav-links a { font-weight:700; font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:rgba(255,255,255,.6); text-decoration:none; transition:color .2s; line-height:1; padding:0; margin:0; }
-  .nav-links a:hover { color:var(--green); }
-  .nav-right { display:flex; align-items:center; justify-content:flex-end; gap:12px; }
-  .btn-ghost { font-family:'Lato',sans-serif; font-weight:700; font-size:13px; letter-spacing:.09em; text-transform:uppercase; color:var(--white); background:transparent; border:1px solid rgba(255,255,255,.28); padding:9px 20px; border-radius:2px; cursor:pointer; text-decoration:none; transition:all .2s; }
-  .btn-ghost:hover { border-color:var(--white); background:rgba(255,255,255,.06); }
-  .btn-green { font-family:'Lato',sans-serif; font-weight:900; font-size:13px; letter-spacing:.09em; text-transform:uppercase; color:var(--black); background:var(--green); border:none; padding:10px 22px; border-radius:2px; cursor:pointer; text-decoration:none; display:inline-block; transition:all .2s; }
-  .btn-green:hover { background:var(--green-light); transform:translateY(-1px); box-shadow:0 8px 24px rgba(67,201,112,.35); }
-
-  /* ══ HERO ══ */
-  .hero { position:relative; min-height:100vh; display:flex; align-items:center; overflow:hidden; padding-top:72px; }
-  .hero-bg {
-    position:absolute; inset:0;
-    background-image:url('https://deltaconstructionpartners.com/wp-content/uploads/2026/03/ECRN-Job-Site-1.png');
-    background-size:cover; background-position:center 40%;
-  }
-  .hero-bg::after {
-    content:''; position:absolute; inset:0;
-    background: linear-gradient(108deg, rgba(0,0,0,.92) 42%, rgba(0,0,0,.38) 100%),
-                linear-gradient(to top, rgba(0,0,0,.95) 0%, transparent 52%);
-  }
-  .hero-grid {
-    position:absolute; inset:0;
-    background-image: linear-gradient(rgba(67,201,112,.035) 1px,transparent 1px), linear-gradient(90deg,rgba(67,201,112,.035) 1px,transparent 1px);
-    background-size:64px 64px; pointer-events:none;
-  }
-  .hero-content { position:relative; z-index:2; max-width:740px; padding:80px 40px 110px; animation:fadeUp 1s ease .15s both; }
-  .hero-eyebrow { font-weight:900; font-size:clamp(20px,2.8vw,38px); letter-spacing:-0.01em; text-transform:uppercase; color:var(--white); margin-bottom:8px; line-height:1.0; }
-  .hero-headline { font-weight:900; font-size:clamp(32px,5vw,68px); line-height:1.0; letter-spacing:-0.02em; text-transform:uppercase; color:var(--green); margin-bottom:24px; }
-  .hero-sub { font-weight:300; font-size:clamp(16px,1.9vw,19px); color:rgba(255,255,255,.72); max-width:540px; margin-bottom:44px; line-height:1.7; }
-  .hero-sub strong { color:var(--white); font-weight:700; }
-  .hero-ctas { display:flex; gap:14px; flex-wrap:wrap; align-items:center; }
-  .btn-hero-p { font-family:'Lato',sans-serif; font-weight:900; font-size:14px; letter-spacing:.1em; text-transform:uppercase; color:var(--black); background:var(--green); border:none; padding:17px 38px; border-radius:2px; cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; gap:10px; transition:all .25s; animation:pulse 2.8s ease 2s infinite; }
-  .btn-hero-p:hover { background:var(--green-light); transform:translateY(-2px); box-shadow:0 14px 36px rgba(67,201,112,.42); animation:none; }
-  .btn-hero-o { font-family:'Lato',sans-serif; font-weight:700; font-size:14px; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.85); background:transparent; border:1.5px solid rgba(255,255,255,.3); padding:15px 34px; border-radius:2px; cursor:pointer; text-decoration:none; display:inline-flex; align-items:center; gap:10px; transition:all .25s; }
-  .btn-hero-o:hover { border-color:var(--green); color:var(--green); }
-  .hero-badge { position:absolute; bottom:48px; right:48px; width:124px; height:124px; border:2px solid var(--green); border-radius:50%; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; animation:fadeIn 1.3s ease 1s both; background:rgba(0,0,0,.5); backdrop-filter:blur(8px); }
-  .hero-badge-num { font-weight:900; font-size:30px; color:var(--green); line-height:1; }
-  .hero-badge-label { font-weight:700; font-size:9px; letter-spacing:.14em; text-transform:uppercase; color:rgba(255,255,255,.7); margin-top:5px; }
-
-  /* ══ STATS ══ */
-  .stats-bar { background:var(--green); }
-  .stats-inner { display:grid; grid-template-columns:repeat(3,1fr); }
-  .stat-item { padding:34px 44px; display:flex; align-items:center; gap:22px; border-right:1px solid rgba(0,0,0,.14); }
-  .stat-item:last-child { border-right:none; }
-  .stat-num { font-weight:900; font-size:54px; color:var(--black); line-height:1; white-space:nowrap; }
-  .stat-text { font-weight:700; font-size:13px; color:rgba(0,0,0,.65); line-height:1.45; max-width:160px; }
-
-  /* ══ SECTION SHARED ══ */
-  section { padding:104px 0; }
-  .section-headline { font-weight:900; font-size:clamp(36px,5vw,64px); line-height:1.0; text-transform:uppercase; letter-spacing:-0.02em; color:var(--white); }
-  .section-body { font-weight:300; font-size:17px; color:rgba(255,255,255,.68); line-height:1.8; max-width:620px; }
-  .section-body strong { color:var(--white); font-weight:700; }
-  .divider { width:56px; height:3px; background:var(--green); margin:28px 0; }
-
-  /* ══ WHAT IS ECRN ══ */
-  .what-ecrn { background:var(--gray-1); position:relative; overflow:hidden; }
-  .what-ecrn::before { content:'ECRN'; position:absolute; right:-60px; top:50%; transform:translateY(-50%); font-weight:900; font-size:300px; color:rgba(67,201,112,.035); letter-spacing:-0.04em; pointer-events:none; user-select:none; line-height:1; }
-  .what-ecrn .container { display:grid; grid-template-columns:1fr 1fr; gap:88px; align-items:center; }
-  .what-img { position:relative; border-radius:3px; overflow:hidden; aspect-ratio:4/5; }
-  .what-img img { width:100%; height:100%; object-fit:cover; display:block; filter:saturate(.8); }
-  .what-img::after { content:''; position:absolute; inset:0; background:linear-gradient(to bottom,transparent 55%,rgba(0,0,0,.65)); }
-  .what-img-badge { position:absolute; bottom:24px; left:24px; z-index:2; background:var(--green); color:var(--black); font-weight:900; font-size:10px; letter-spacing:.18em; text-transform:uppercase; padding:8px 16px; }
-
-  /* ══ MISSION BAND ══ */
-  .mission-band { background:var(--gray-1); border-top:1px solid rgba(67,201,112,.12); border-bottom:1px solid rgba(67,201,112,.12); padding:72px 40px; text-align:center; }
-  .mission-band-inner { max-width:760px; margin:0 auto; }
-  .mission-label { font-weight:700; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--green); margin-bottom:20px; }
-  .mission-quote { font-weight:900; font-size:clamp(36px,5vw,64px); text-transform:uppercase; line-height:1.0; letter-spacing:-0.02em; color:var(--white); }
-  .mission-quote .accent { color:var(--green); }
-  .mission-attr { font-weight:300; font-size:14px; color:rgba(255,255,255,.45); margin-top:20px; letter-spacing:.06em; text-transform:uppercase; }
-
-  /* ══ DUAL AUDIENCE ══ */
-  .dual-audience { background:var(--black); }
-  .dual-grid { display:grid; grid-template-columns:1fr 1fr; gap:3px; margin-top:64px; }
-  .aud-card { padding:56px 52px; position:relative; overflow:hidden; transition:transform .3s; }
-  .aud-card:hover { transform:translateY(-4px); }
-  .aud-card.pro { background:var(--gray-2); border-top:4px solid var(--green); }
-  .aud-card.pro:hover { box-shadow:0 24px 60px rgba(67,201,112,.14); }
-  .aud-card.contractor { background:var(--green); border-top:4px solid var(--green-dark); }
-  .aud-card.contractor:hover { box-shadow:0 24px 60px rgba(0,0,0,.4); }
-  .card-audience { font-weight:900; font-size:clamp(24px,3vw,34px); text-transform:uppercase; line-height:1.0; letter-spacing:-0.025em; margin-bottom:10px; }
-  .pro .card-audience { color:var(--white); }
-  .contractor .card-audience { color:var(--black); }
-  .card-action { font-weight:700; font-size:13px; letter-spacing:.12em; text-transform:uppercase; margin-bottom:28px; padding-bottom:24px; }
-  .pro .card-action { color:var(--green); border-bottom:1px solid rgba(67,201,112,.2); }
-  .contractor .card-action { color:rgba(0,0,0,.55); border-bottom:1px solid rgba(0,0,0,.12); }
-  .card-desc { font-weight:300; font-size:15px; line-height:1.7; margin-bottom:32px; }
-  .pro .card-desc { color:rgba(255,255,255,.62); }
-  .contractor .card-desc { color:rgba(0,0,0,.62); }
-  .card-perks { list-style:none; display:flex; flex-direction:column; gap:14px; }
-  .card-perks li { display:flex; align-items:flex-start; gap:12px; font-weight:400; font-size:14px; line-height:1.5; }
-  .pro .card-perks li { color:rgba(255,255,255,.78); }
-  .contractor .card-perks li { color:rgba(0,0,0,.72); }
-  .perk-check { width:20px; height:20px; border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; font-size:10px; font-weight:900; margin-top:1px; }
-  .pro .perk-check { background:rgba(67,201,112,.18); color:var(--green); }
-  .contractor .perk-check { background:rgba(0,0,0,.14); color:rgba(0,0,0,.7); }
-  .card-cta { font-family:'Lato',sans-serif; font-weight:900; font-size:13px; letter-spacing:.1em; text-transform:uppercase; padding:13px 28px; border-radius:2px; cursor:pointer; text-decoration:none; display:inline-block; margin-top:36px; transition:all .22s; border:none; }
-  .pro .card-cta { background:var(--green); color:var(--black); }
-  .pro .card-cta:hover { background:var(--green-light); transform:translateY(-1px); box-shadow:0 8px 24px rgba(67,201,112,.35); }
-  .contractor .card-cta { background:var(--black); color:var(--white); }
-  .contractor .card-cta:hover { background:var(--gray-3); transform:translateY(-1px); }
-
-  /* ══ HOW IT WORKS ══ */
-  .how-it-works { background:var(--gray-1); }
-  .steps-row { display:grid; grid-template-columns:repeat(4,1fr); margin-top:64px; position:relative; }
-  .steps-row::before { content:''; position:absolute; top:38px; left:8%; width:84%; height:1px; background:linear-gradient(to right,transparent,rgba(67,201,112,.4),transparent); }
-  .step { padding:40px 32px; position:relative; z-index:1; border-right:1px solid rgba(255,255,255,.055); transition:background .3s; }
-  .step:last-child { border-right:none; }
-  .step:hover { background:rgba(67,201,112,.03); }
-  .step-num { font-weight:900; font-size:68px; line-height:1; color:rgba(67,201,112,.13); margin-bottom:20px; transition:color .3s; }
-  .step:hover .step-num { color:rgba(67,201,112,.28); }
-  .step-dot { width:14px; height:14px; border-radius:50%; background:var(--green); margin-bottom:20px; position:relative; }
-  .step-dot::after { content:''; position:absolute; inset:-5px; border-radius:50%; border:1px solid rgba(67,201,112,.28); }
-  .step-title { font-weight:700; font-size:18px; text-transform:uppercase; letter-spacing:.06em; color:var(--white); margin-bottom:12px; }
-  .step-desc { font-weight:300; font-size:14px; color:rgba(255,255,255,.52); line-height:1.7; }
-  .steps-bottom { margin-top:64px; text-align:center; font-weight:300; font-size:18px; color:rgba(255,255,255,.5); line-height:1.7; max-width:560px; margin-left:auto; margin-right:auto; }
-  .steps-bottom strong { color:var(--white); font-weight:700; }
-
-  /* ══ WHY ECRN VIDEO ══ */
-  .why-ecrn { background:var(--black); }
-  .why-header {
-    display:grid; grid-template-columns:1fr 1fr;
-    gap:48px; align-items:center; margin-bottom:64px;
-  }
-  .why-video-wrap {
-    position:relative; border-radius:4px; overflow:hidden; background:var(--black);
-  }
-  .why-video-wrap::before {
-    content:''; position:absolute; inset:0; z-index:2; pointer-events:none;
-    background:
-      linear-gradient(to bottom, var(--black) 0%, transparent 20%, transparent 80%, var(--black) 100%),
-      linear-gradient(to right, transparent 60%, var(--black) 100%),
-      linear-gradient(to left, transparent 60%, var(--black) 100%);
-  }
-  .why-video-wrap::after {
-    content:''; position:absolute; inset:0; z-index:1; pointer-events:none;
-    background: radial-gradient(ellipse 80% 70% at 50% 50%, rgba(67,201,112,.1) 0%, transparent 70%);
-  }
-  .why-video {
-    display:block; width:100%; height:380px; object-fit:cover;
-    filter:brightness(.7) saturate(1.15);
-  }
-  @media (max-width: 960px) {
-    .why-header { grid-template-columns:1fr; gap:32px; }
-    .why-video { height:260px; }
-  }
-
-
-  .why-grid { display:grid; grid-template-columns:repeat(2,1fr); gap:3px; margin-top:64px; }
-  .why-card { padding:48px 52px; background:var(--gray-2); border-left:3px solid transparent; position:relative; overflow:hidden; transition:border-color .3s, background .3s; }
-  .why-card::before { content:''; position:absolute; inset:0; background:linear-gradient(135deg,rgba(67,201,112,.04) 0%,transparent 55%); opacity:0; transition:opacity .3s; }
-  .why-card:hover { border-left-color:var(--green); background:var(--gray-3); }
-  .why-card:hover::before { opacity:1; }
-  .why-num { font-weight:700; font-size:10px; letter-spacing:.2em; color:var(--green); text-transform:uppercase; margin-bottom:18px; }
-  .why-title { font-weight:900; font-size:20px; text-transform:uppercase; letter-spacing:.03em; color:var(--white); margin-bottom:14px; line-height:1.2; }
-  .why-desc { font-weight:300; font-size:14px; color:rgba(255,255,255,.55); line-height:1.75; }
-
-  /* ══ TIER INFOGRAPHIC ══ */
-  .tier-card { background:var(--gray-1); border-top:4px solid var(--green); padding:48px 44px; display:flex; flex-direction:column; gap:0; }
-  .tier-header { margin-bottom:32px; padding-bottom:28px; border-bottom:1px solid rgba(67,201,112,.15); }
-  .tier-eyebrow { font-weight:700; font-size:10px; letter-spacing:.22em; text-transform:uppercase; color:var(--green); margin-bottom:10px; }
-  .tier-heading { font-weight:900; font-size:22px; text-transform:uppercase; letter-spacing:-0.01em; color:var(--white); line-height:1.15; margin-bottom:10px; }
-  .tier-sub { font-weight:300; font-size:13px; color:rgba(255,255,255,.5); line-height:1.65; }
-  .tier-list { display:flex; flex-direction:column; gap:0; flex:1; }
-  /* Each tier item is a hoverable card */
-  .tier-item {
-    display:flex; gap:16px; padding:20px 0; position:relative;
-    border-bottom:1px solid rgba(255,255,255,.06);
-    margin:0 -44px; padding:20px 44px;
-    border-left:3px solid transparent;
-    transition:background .25s, border-left-color .25s;
-    cursor:default;
-  }
-  .tier-item:last-child { border-bottom:none; }
-  .tier-item:hover {
-    background:rgba(67,201,112,.05);
-    border-left-color:var(--green);
-  }
-  .tier-item:hover .tier-badge { background:rgba(67,201,112,.15); border-color:var(--green); color:var(--green); }
-  .tier-item:hover .tier-roles { max-height:80px; opacity:1; margin-top:10px; }
-  .tier-badge {
-    flex-shrink:0; width:52px; height:52px; border-radius:2px;
-    background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1);
-    display:flex; align-items:center; justify-content:center;
-    font-weight:900; font-size:10px; letter-spacing:.1em; text-transform:uppercase;
-    color:rgba(255,255,255,.45); text-align:center; line-height:1.2;
-    transition:background .25s, border-color .25s, color .25s;
-  }
-  .tier-body { flex:1; }
-  .tier-title { font-weight:700; font-size:14px; text-transform:uppercase; letter-spacing:.05em; color:var(--white); margin-bottom:6px; }
-  .tier-payout { display:inline-block; font-weight:900; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--black); background:var(--green); padding:3px 10px; border-radius:2px; margin-bottom:8px; }
-  .tier-desc { font-weight:300; font-size:12px; color:rgba(255,255,255,.45); line-height:1.6; margin-bottom:0; }
-  /* Roles hidden by default, revealed on hover */
-  .tier-roles {
-    display:flex; flex-wrap:wrap; gap:6px;
-    max-height:0; opacity:0; overflow:hidden;
-    transition:max-height .35s ease, opacity .3s ease, margin-top .3s ease;
-    margin-top:0;
-  }
-  .tier-roles span {
-    font-weight:700; font-size:10px; letter-spacing:.08em; text-transform:uppercase;
-    color:var(--green); background:rgba(67,201,112,.12);
-    padding:4px 10px; border-radius:2px;
-  }
-
-  /* ══ FAQ ACCORDION ══ */
-  .faq-section { background:var(--black); }
-  .faq-subtitle { font-weight:700; font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--green); margin-bottom:16px; }
-  .faq-list { margin-top:56px; border-top:1px solid rgba(255,255,255,.08); }
-  .acc-item { border-bottom:1px solid rgba(255,255,255,.08); }
-  .acc-trigger {
-    width:100%; background:none; border:none; cursor:pointer;
-    padding:28px 0; display:flex; align-items:center; justify-content:space-between; gap:24px;
-    text-align:left;
-  }
-  .acc-trigger:hover .acc-q { color:var(--green); }
-  .acc-q { font-weight:700; font-size:17px; text-transform:uppercase; letter-spacing:.03em; color:var(--white); line-height:1.3; transition:color .2s; }
-  .acc-icon { width:28px; height:28px; border:1.5px solid rgba(255,255,255,.2); border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center; transition:all .3s; }
-  .acc-icon svg { transition:transform .35s; }
-  .acc-item.open .acc-icon { background:var(--green); border-color:var(--green); }
-  .acc-item.open .acc-icon svg { transform:rotate(45deg); }
-  .acc-item.open .acc-icon svg path { stroke:var(--black); }
-  .acc-body { overflow:hidden; max-height:0; transition:max-height .4s ease, padding .4s ease; }
-  .acc-body-inner { padding:0 0 28px; font-weight:300; font-size:15px; color:rgba(255,255,255,.55); line-height:1.8; max-width:720px; }
-
-  /* ══ CLOSING ══ */
-  .closing { position:relative; overflow:hidden; text-align:center; padding:148px 40px; }
-  .closing-bg { position:absolute; inset:0; background-image:url('https://deltaconstructionpartners.com/wp-content/uploads/2026/03/ECRN-Electrical-Construction-Workers-On-Site-1.png'); background-size:cover; background-position:center 30%; filter:brightness(.18) saturate(.5); }
-  .closing::before { content:''; position:absolute; inset:0; background:radial-gradient(ellipse 80% 60% at 50% 50%,rgba(67,201,112,.12) 0%,transparent 70%); z-index:1; pointer-events:none; }
-  .closing-wm { position:absolute; bottom:-40px; left:50%; transform:translateX(-50%); font-weight:900; font-size:clamp(90px,18vw,190px); color:rgba(255,255,255,.025); white-space:nowrap; pointer-events:none; text-transform:uppercase; letter-spacing:-0.02em; z-index:1; user-select:none; }
-  .closing-inner { position:relative; z-index:2; }
-  .closing-hashtag { font-weight:700; font-size:11px; letter-spacing:.22em; text-transform:uppercase; color:var(--green); margin-bottom:30px; }
-  .closing-headline { font-weight:900; font-size:clamp(44px,6.5vw,84px); text-transform:uppercase; line-height:1.0; letter-spacing:-0.02em; margin-bottom:26px; color:var(--white); }
-  .closing-body { font-weight:300; font-size:18px; color:rgba(255,255,255,.62); max-width:500px; margin:0 auto 48px; line-height:1.7; }
-  .closing-ctas { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
-  .btn-cp { font-family:'Lato',sans-serif; font-weight:900; font-size:15px; letter-spacing:.1em; text-transform:uppercase; color:var(--black); background:var(--green); border:none; padding:18px 46px; border-radius:2px; cursor:pointer; text-decoration:none; display:inline-block; transition:all .25s; }
-  .btn-cp:hover { background:var(--green-light); transform:translateY(-2px); box-shadow:0 14px 44px rgba(67,201,112,.48); }
-  .btn-co { font-family:'Lato',sans-serif; font-weight:700; font-size:15px; letter-spacing:.1em; text-transform:uppercase; color:var(--white); background:transparent; border:1.5px solid rgba(255,255,255,.3); padding:16px 42px; border-radius:2px; cursor:pointer; text-decoration:none; display:inline-block; transition:all .25s; }
-  .btn-co:hover { border-color:var(--green); color:var(--green); }
-
-  /* ══ FOOTER ══ */
-  footer { background:var(--gray-1); border-top:1px solid rgba(255,255,255,.06); padding:28px 40px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:16px; }
-  .footer-logo img { height:26px; opacity:.65; display:block; }
-  .footer-copy { font-weight:400; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:rgba(255,255,255,.28); text-align:center; }
-  .footer-tag { font-weight:700; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--green); }
-
-  /* ══ MISSION / VISION BAND ══ */
-  .mv-band { background:var(--gray-1); border-top:1px solid rgba(67,201,112,.12); border-bottom:1px solid rgba(67,201,112,.12); padding:80px 40px; }
-  .mv-grid { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:3px; }
-  .mv-card { background:var(--gray-2); border:1px solid rgba(67,201,112,.15); padding:56px 52px; position:relative; overflow:hidden; transition:background .45s ease,border-color .45s ease,box-shadow .45s ease,transform .35s ease; cursor:default; }
-  .mv-card::before { content:''; position:absolute; inset:0; background:var(--green); opacity:0; transition:opacity .45s ease; z-index:0; }
-  .mv-card:hover { border-color:var(--green); box-shadow:0 0 60px rgba(67,201,112,.35),0 0 120px rgba(67,201,112,.12); transform:translateY(-3px); }
-  .mv-card:hover::before { opacity:1; }
-  .mv-card > * { position:relative; z-index:1; }
-  .mv-label { font-weight:700; font-size:10px; letter-spacing:.24em; text-transform:uppercase; color:var(--green); display:flex; align-items:center; gap:12px; margin-bottom:28px; transition:color .45s ease; }
-  .mv-label::before { content:''; width:24px; height:2px; background:var(--green); flex-shrink:0; transition:background .45s ease; }
-  .mv-card:hover .mv-label { color:rgba(0,0,0,.6); }
-  .mv-card:hover .mv-label::before { background:rgba(0,0,0,.4); }
-  .mv-text { font-weight:900; font-size:clamp(22px,2.4vw,32px); line-height:1.15; letter-spacing:-0.02em; text-transform:uppercase; color:var(--white); transition:color .45s ease; }
-  .mv-text .accent { color:var(--green); transition:color .45s ease; }
-  .mv-card:hover .mv-text { color:var(--black); }
-  .mv-card:hover .mv-text .accent { color:rgba(0,0,0,.75); }
-  .mv-attr { font-weight:300; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:rgba(255,255,255,.3); margin-top:32px; padding-top:24px; border-top:1px solid rgba(67,201,112,.15); transition:color .45s ease,border-color .45s ease; }
-  .mv-card:hover .mv-attr { color:rgba(0,0,0,.5); border-top-color:rgba(0,0,0,.15); }
-
-  /* ══ T&C BADGE ══ */
-  .tc-trigger {
-    display:inline-flex; align-items:center; justify-content:center;
-    background:var(--green); color:var(--black);
-    border:none; cursor:pointer;
-    font-family:'Lato',sans-serif; font-weight:900; font-size:9px;
-    line-height:1; padding:2px 5px; border-radius:3px;
-    vertical-align:super; margin-left:2px;
-    letter-spacing:.04em; text-transform:uppercase;
-    transition:background .2s, transform .15s;
-    white-space:nowrap;
-  }
-  .tc-trigger:hover { background:var(--green-light); transform:scale(1.08); }
-  .stats-bar .tc-trigger { background:rgba(0,0,0,.18); color:rgba(0,0,0,.75); }
-  .stats-bar .tc-trigger:hover { background:rgba(0,0,0,.3); }
-  .tc-footer-btn { background:none; border:none; cursor:pointer; color:rgba(255,255,255,.28); font-size:11px; letter-spacing:.1em; text-transform:uppercase; font-family:'Lato',sans-serif; font-weight:400; padding:0; text-decoration:underline; text-underline-offset:3px; transition:color .2s; }
-  .tc-footer-btn:hover { color:var(--green); }
-
-  /* ══ MODALS ══ */
-  .modal-overlay { display:none; position:fixed; inset:0; z-index:9000; background:rgba(0,0,0,.88); backdrop-filter:blur(12px); align-items:center; justify-content:center; padding:24px; }
-  .modal-overlay.active { display:flex; }
-  .modal-box { background:var(--gray-1); border:1px solid rgba(67,201,112,.2); border-top:3px solid var(--green); border-radius:3px; width:100%; max-width:680px; max-height:92vh; display:flex; flex-direction:column; position:relative; animation:fadeUp .3s ease both; }
-  .modal-header { display:flex; align-items:center; justify-content:space-between; padding:22px 28px; border-bottom:1px solid rgba(255,255,255,.07); flex-shrink:0; }
-  .modal-title { font-weight:900; font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--white); }
-  .modal-subtitle { font-weight:300; font-size:12px; color:rgba(255,255,255,.45); margin-top:3px; }
-  .modal-close { width:32px; height:32px; border:1px solid rgba(255,255,255,.15); border-radius:50%; background:none; cursor:pointer; color:rgba(255,255,255,.5); font-size:16px; display:flex; align-items:center; justify-content:center; transition:all .2s; flex-shrink:0; }
-  .modal-close:hover { border-color:var(--green); color:var(--green); }
-  .modal-body { overflow-y:auto; flex:1; padding:0; }
-  .modal-body iframe { display:block; width:100%; border:none; }
-  .tc-modal-body { padding:32px 28px 40px; overflow-y:auto; max-height:calc(92vh - 80px); }
-  .tc-modal-body h3 { font-weight:900; font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--green); margin:28px 0 10px; }
-  .tc-modal-body h3:first-child { margin-top:0; }
-  .tc-modal-body p { font-weight:300; font-size:14px; color:rgba(255,255,255,.6); line-height:1.8; margin-bottom:12px; }
-  .tc-modal-body strong { color:rgba(255,255,255,.85); font-weight:700; }
-
-  @media (max-width: 960px) {
-    .mv-grid { grid-template-columns:1fr; }
-    .mv-card { padding:44px 32px; }
-  }
-
-
-  @media (max-width: 960px) {
-    .nav-links { display:none; }
-    .what-ecrn .container { grid-template-columns:1fr; }
-    .what-img { display:none; }
-    .dual-grid { grid-template-columns:1fr; }
-    .steps-row { grid-template-columns:repeat(2,1fr); }
-    .steps-row::before { display:none; }
-    .why-grid { grid-template-columns:1fr; }
-    .founding-inner { grid-template-columns:1fr; gap:48px; }
-    .stats-inner { grid-template-columns:1fr; }
-    .stat-item { border-right:none; border-bottom:1px solid rgba(0,0,0,.14); }
-    .faq-list { margin-top:40px; }
-    .acc-q { font-size:15px; }
-  }
-  @media (max-width: 600px) {
-    .container { padding:0 24px; }
-    section { padding:72px 0; }
-    .steps-row { grid-template-columns:1fr; }
-    .hero-ctas { flex-direction:column; }
-    .hero-badge { display:none; }
-    .closing { padding:96px 24px; }
-  }
+:root{--g:#43c970;--gd:#038261;--gl:#abef9a;--bk:#000;--wh:#fff;--g1:#111;--g2:#1a1a1a;--g3:#222}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Lato',sans-serif;background:var(--bk);color:var(--wh);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-width:100%}
+/* SPLASH */
+#splash{position:fixed;inset:0;z-index:9999;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;transition:opacity .4s}
+#splash.hide{opacity:0;pointer-events:none}
+#splash img{height:48px;width:auto;animation:spp 1.4s ease-in-out infinite}
+.sbar{width:120px;height:2px;background:rgba(67,201,112,.15);border-radius:2px;overflow:hidden}
+.sfill{height:100%;width:0;background:var(--g);animation:sld .9s ease forwards}
+@keyframes spp{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.7;transform:scale(.95)}}
+@keyframes sld{to{width:100%}}
+/* LAYOUT */
+.wrap{width:100%;max-width:1280px;margin:0 auto;padding:0 48px}
+.sec{padding:88px 0}
+.eyebrow{font-weight:700;font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--g)}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.reveal.vis{opacity:1;transform:none}
+/* BUTTONS */
+.btn-p{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--gl),var(--g));color:#000;font-weight:900;font-size:14px;letter-spacing:.07em;text-transform:uppercase;padding:15px 30px;border-radius:14px;border:none;cursor:pointer;box-shadow:0 0 32px rgba(67,201,112,.28);transition:transform .2s,box-shadow .2s}
+.btn-p:hover{transform:scale(1.02);box-shadow:0 0 48px rgba(67,201,112,.42)}
+.btn-p svg{transition:transform .2s}.btn-p:hover svg{transform:translateX(4px)}
+.btn-o{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.05);color:#fff;font-weight:700;font-size:14px;letter-spacing:.07em;text-transform:uppercase;padding:15px 30px;border-radius:14px;border:1px solid rgba(255,255,255,.15);cursor:pointer;transition:background .2s}
+.btn-o:hover{background:rgba(255,255,255,.1)}
+/* HERO */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px 0 80px}
+.hg1{position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 75% 25%,rgba(67,201,112,.2) 0%,transparent 34%),radial-gradient(circle at 15% 80%,rgba(67,201,112,.13) 0%,transparent 30%)}
+.hgrid{position:absolute;inset:0;pointer-events:none;opacity:.07;background-image:linear-gradient(to right,#43c970 1px,transparent 1px),linear-gradient(to bottom,#43c970 1px,transparent 1px);background-size:72px 72px}
+.hring{position:absolute;right:-112px;top:80px;width:520px;height:520px;border-radius:50%;border:1px solid rgba(67,201,112,.18);filter:blur(2px);pointer-events:none}
+.hblob{position:absolute;right:0;bottom:0;width:420px;height:420px;background:rgba(67,201,112,.07);filter:blur(80px);pointer-events:none}
+.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;width:100%}
+.hl .logo{margin-bottom:32px}.hl .logo img{height:44px;width:auto}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(67,201,112,.3);background:rgba(67,201,112,.1);padding:8px 16px;border-radius:999px;font-weight:700;font-size:13px;color:var(--gl);margin-bottom:22px}
+.pill svg{width:15px;height:15px}
+.h1{font-weight:900;font-size:clamp(46px,7vw,86px);line-height:.95;letter-spacing:-.03em;text-transform:uppercase;margin-bottom:22px}
+.h1 .ac{color:var(--g)}
+.hsub{font-weight:300;font-size:clamp(16px,1.6vw,19px);color:rgba(255,255,255,.75);line-height:1.7;max-width:520px;margin-bottom:32px}
+.hsub strong{font-weight:700;color:#fff}
+.hbadges{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:480px;margin-bottom:32px}
+.hbc{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.05);border-radius:14px;padding:14px}
+.hbc svg{width:18px;height:18px;color:var(--g)}
+.hbc-t{font-weight:900;font-size:15px;margin-top:8px}
+.hbc-s{font-size:12px;color:rgba(255,255,255,.5);margin-top:2px}
+.hctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:18px}
+.hnote{font-size:13px;color:rgba(255,255,255,.38)}
+/* Hero right card */
+.hcard-w{position:relative}
+.hcard-glow{position:absolute;inset:-24px;border-radius:48px;background:rgba(67,201,112,.16);filter:blur(60px)}
+.hcard{position:relative;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);border-radius:40px;padding:16px;backdrop-filter:blur(20px)}
+.hcard-in{border-radius:28px;overflow:hidden;position:relative;background:linear-gradient(135deg,#1a1a1a,#000,#111);min-height:580px;padding:24px;display:flex;flex-direction:column;justify-content:space-between}
+.hci-glow{position:absolute;right:-80px;top:-80px;width:280px;height:280px;border-radius:50%;background:rgba(67,201,112,.18);filter:blur(60px)}
+.hci-line{position:absolute;left:32px;right:32px;bottom:160px;height:1px;background:rgba(67,201,112,.22)}
+.hci-sq{position:absolute;right:24px;bottom:24px;width:120px;height:120px;border-radius:20px;border:1px solid rgba(67,201,112,.22);transform:rotate(45deg)}
+.hci-phone{align-self:flex-end;border:1px solid rgba(67,201,112,.22);background:rgba(0,0,0,.6);border-radius:20px;padding:14px}
+.hci-phone svg{width:36px;height:36px;color:var(--g)}
+.hci-cnt{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.06);border-radius:20px;padding:22px;backdrop-filter:blur(16px);position:relative;z-index:2}
+.hci-lbl{font-size:11px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--g)}
+.hci-ttl{font-weight:900;font-size:26px;line-height:1.1;margin-top:10px}
+.hci-bd{font-weight:300;font-size:14px;color:rgba(255,255,255,.6);line-height:1.65;margin-top:10px}
+.mstats{display:grid;grid-template-columns:1fr 1fr;gap:12px;position:relative;z-index:2}
+.ms{border:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.5);border-radius:14px;padding:16px}
+.ms-l{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.38)}
+.ms-v{font-weight:900;font-size:20px;color:var(--g);margin-top:6px}
+/* ROLE */
+.role-sec{background:var(--bk);border-top:1px solid rgba(255,255,255,.08)}
+.role-in{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px}
+.role-l h2{font-weight:900;font-size:clamp(34px,4.2vw,52px);line-height:1.05;letter-spacing:-.02em;margin:14px 0 18px}
+.role-l p{font-weight:300;font-size:17px;color:rgba(255,255,255,.65);line-height:1.75;margin-bottom:28px}
+.feats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.feat{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);border-radius:20px;padding:22px;transition:background .2s}
+.feat:hover{background:rgba(255,255,255,.07)}
+.feat-ic{width:44px;height:44px;border-radius:14px;background:rgba(67,201,112,.1);border:1px solid rgba(67,201,112,.2);display:flex;align-items:center;justify-content:center;color:var(--g)}
+.feat-ic svg{width:22px;height:22px}
+.feat h3{font-weight:900;font-size:17px;margin:14px 0 7px}
+.feat p{font-weight:300;font-size:14px;color:rgba(255,255,255,.6);line-height:1.65}
+/* EARN */
+.earn-sec{border-top:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden}
+.ebg{position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(67,201,112,.15) 0%,transparent 55%);pointer-events:none}
+.ebg2{position:absolute;left:-80px;top:50%;width:420px;height:420px;border-radius:50%;background:rgba(67,201,112,.07);filter:blur(80px);pointer-events:none}
+.earn-h{text-align:center;max-width:680px;margin:0 auto 48px}
+.earn-h h2{font-weight:900;font-size:clamp(34px,4.2vw,52px);line-height:1.05;letter-spacing:-.02em;margin:14px 0 18px}
+.earn-h p{font-weight:300;font-size:17px;color:rgba(255,255,255,.68);line-height:1.75}
+.earn-card{border:1px solid rgba(67,201,112,.25);background:linear-gradient(135deg,rgba(67,201,112,.11),rgba(67,201,112,.04),transparent);border-radius:28px;padding:44px;backdrop-filter:blur(20px)}
+.earn-ci{display:grid;grid-template-columns:1fr 1.1fr;gap:44px;align-items:center}
+.per-lbl{font-size:11px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--g)}
+.earn-num{font-weight:900;font-size:clamp(56px,8vw,96px);line-height:.9;letter-spacing:-.03em;color:var(--g);margin:12px 0}
+.earn-num .sep{color:rgba(255,255,255,.22);font-size:.65em;margin:0 4px}
+.earn-note{font-weight:300;font-size:14px;color:rgba(255,255,255,.58);line-height:1.65;max-width:280px}
+.erows{display:flex;flex-direction:column;gap:12px}
+.erow{display:flex;gap:14px;align-items:flex-start;border:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.4);border-radius:16px;padding:16px;backdrop-filter:blur(16px)}
+.er-ic{width:42px;height:42px;border-radius:12px;flex-shrink:0;background:rgba(67,201,112,.1);border:1px solid rgba(67,201,112,.22);display:flex;align-items:center;justify-content:center;color:var(--g)}
+.er-ic svg{width:18px;height:18px}
+.er-t{font-weight:900;font-size:15px;margin-bottom:4px}
+.er-b{font-weight:300;font-size:13px;color:rgba(255,255,255,.58);line-height:1.6}
+.earn-ft{display:flex;align-items:center;justify-content:center;gap:24px;margin-top:32px;flex-wrap:wrap}
+.earn-ft p{font-size:14px;color:rgba(255,255,255,.48);max-width:460px;text-align:center}
+/* CONTENT */
+.cont-sec{background:rgba(255,255,255,.02);border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}
+.cont-sec h2{font-weight:900;font-size:clamp(34px,4.2vw,52px);line-height:1.05;letter-spacing:-.02em;margin:14px 0 44px}
+.ccards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.ccard{border:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.5);border-radius:20px;padding:22px;min-height:210px;display:flex;flex-direction:column;justify-content:space-between}
+.ccard-ic{color:var(--g)}.ccard-ic svg{width:34px;height:34px}
+.ccard-t{font-weight:900;font-size:19px;margin-bottom:7px}
+.ccard-b{font-weight:300;font-size:14px;color:rgba(255,255,255,.58);line-height:1.65}
+.ccta{display:flex;justify-content:center;margin-top:44px}
+/* WHO */
+.who-sec{border-top:1px solid rgba(255,255,255,.08)}
+.who-in{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.wcard{border:1px solid rgba(67,201,112,.2);background:rgba(67,201,112,.08);border-radius:28px;padding:40px;position:sticky;top:32px}
+.wcard h2{font-weight:900;font-size:clamp(30px,3.4vw,42px);line-height:1.05;margin:14px 0 18px}
+.wcard p{font-weight:300;font-size:16px;color:rgba(255,255,255,.7);line-height:1.75;margin-bottom:26px}
+.wlist{display:flex;flex-direction:column;gap:10px}
+.witem{display:flex;align-items:center;gap:14px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);border-radius:14px;padding:13px 18px}
+.witem svg{width:19px;height:19px;color:var(--g);flex-shrink:0}
+.witem span{font-size:16px;color:rgba(255,255,255,.8)}
+/* WHY */
+.why-sec{background:linear-gradient(to bottom,rgba(255,255,255,.02),#000);border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}
+.why-in{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
+.why-l h2{font-weight:900;font-size:clamp(34px,4.2vw,52px);line-height:1.05;letter-spacing:-.02em;margin:14px 0 18px}
+.why-l p{font-weight:300;font-size:17px;color:rgba(255,255,255,.65);line-height:1.75;margin-bottom:28px}
+.litems{display:flex;flex-direction:column;gap:12px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);border-radius:24px;padding:26px}
+.litem{display:flex;gap:18px;border:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.4);border-radius:14px;padding:18px}
+.li-n{font-weight:900;font-size:22px;color:var(--g);flex-shrink:0}
+.li-t{font-weight:900;font-size:17px;margin-bottom:5px}
+.li-b{font-weight:300;font-size:14px;color:rgba(255,255,255,.58);line-height:1.65}
+/* APPLY */
+.apply-sec{border-top:1px solid rgba(255,255,255,.08)}
+.apply-in{display:grid;grid-template-columns:.95fr 1.05fr;gap:48px;align-items:start}
+.apply-l h2{font-weight:900;font-size:clamp(34px,4.2vw,52px);line-height:1.05;letter-spacing:-.02em;margin:14px 0 18px}
+.apply-l p{font-weight:300;font-size:17px;color:rgba(255,255,255,.65);line-height:1.75;margin-bottom:26px}
+.anote{border:1px solid rgba(67,201,112,.2);background:rgba(67,201,112,.08);border-radius:18px;padding:20px}
+.anote strong{font-weight:900;font-size:19px;display:block;margin-bottom:7px}
+.anote p{font-weight:300;font-size:14px;color:rgba(255,255,255,.68);line-height:1.65}
+.aform{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);border-radius:26px;padding:30px;backdrop-filter:blur(20px)}
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fg{display:flex;flex-direction:column;gap:7px}
+.fg.full{grid-column:1/-1}
+.fg label{font-size:13px;color:rgba(255,255,255,.52)}
+.fg input,.fg select,.fg textarea{background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:12px 15px;font-family:'Lato',sans-serif;font-size:15px;color:#fff;outline:none;transition:border-color .2s;resize:none}
+.fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,.28)}
+.fg input:focus,.fg select:focus,.fg textarea:focus{border-color:rgba(67,201,112,.5)}
+.fg select option{background:#111}
+.fbottom{margin-top:14px;display:flex;flex-direction:column;gap:12px}
+.bsub{width:100%;padding:17px;background:linear-gradient(135deg,var(--gl),var(--g));color:#000;font-family:'Lato',sans-serif;font-weight:900;font-size:15px;letter-spacing:.07em;text-transform:uppercase;border:none;border-radius:13px;cursor:pointer;box-shadow:0 0 32px rgba(67,201,112,.22);transition:transform .2s,box-shadow .2s}
+.bsub:hover{transform:scale(1.01);box-shadow:0 0 46px rgba(67,201,112,.38)}
+.fdis{font-size:12px;color:rgba(255,255,255,.32);text-align:center}
+/* FAQ */
+.faq-sec{background:rgba(255,255,255,.02);border-top:1px solid rgba(255,255,255,.08)}
+.faq-hd{text-align:center;margin-bottom:44px}
+.faq-hd h2{font-weight:900;font-size:clamp(34px,4.2vw,52px);line-height:1.05;letter-spacing:-.02em;margin-top:14px}
+.faq-list{max-width:860px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
+.faq-it{border:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.45);border-radius:18px;padding:20px 24px}
+.faq-it h3{font-weight:900;font-size:17px;margin-bottom:9px}
+.faq-it p{font-weight:300;font-size:15px;color:rgba(255,255,255,.58);line-height:1.7}
+/* FOOTER */
+.footer{padding:40px 0;border-top:1px solid rgba(255,255,255,.08);display:flex;align-items:center;justify-content:space-between}
+.footer img{height:30px;opacity:.6}
+.footer-r{font-size:12px;color:rgba(255,255,255,.32);text-align:right}
+/* RESPONSIVE */
+@media(max-width:1024px){
+  .hero-in,.role-in,.earn-ci,.who-in,.why-in,.apply-in{grid-template-columns:1fr}
+  .hcard-w{display:none}
+  .feats{grid-template-columns:1fr}
+  .ccards{grid-template-columns:1fr 1fr}
+  .wcard{position:static}
+}
+@media(max-width:640px){
+  .wrap{padding:0 20px}.sec{padding:60px 0}
+  .hbadges,.ccards,.fgrid{grid-template-columns:1fr}
+  .footer{flex-direction:column;gap:14px;text-align:center}
+  .footer-r{text-align:center}
+  .earn-card{padding:26px 18px}
+  .hctas{flex-direction:column}
+}
+svg{display:inline-block}
 </style>
 </head>
 <body>
 
-<!-- NAV -->
-<nav id="navbar">
-  <div class="nav-left">
-    <a href="#"><img src="https://deltaconstructionpartners.com/wp-content/uploads/2026/03/ECRN-Horizontal-Logo-White.png" alt="ECRN"></a>
-  </div>
-  <ul class="nav-links">
-    <li><a href="#about">About</a></li>
-    <li><a href="#how-it-works">How It Works</a></li>
-    <li><a href="#faq">FAQ</a></li>
-    <li><a href="#join">Get Started</a></li>
-  </ul>
-  <div class="nav-right">
-    <button onclick="openModal('signup')" class="btn-green">Sign Up</button>
-  </div>
-</nav>
+<div id="splash">
+  <img src="https://deltaconstructionpartners.com/wp-content/uploads/2026/03/ECRN-Horizontal-Logo-White.png" alt="ECRN">
+  <div class="sbar"><div class="sfill"></div></div>
+</div>
 
-<!-- HERO - Image: Job Site 1 -->
+<!-- HERO -->
 <section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-grid"></div>
-  <div class="container" style="position:relative;z-index:2;width:100%;">
-    <div class="hero-content">
-      <div class="hero-eyebrow">Electrical Construction Referral Network</div>
-      <h1 class="hero-headline">Power Your <span class="accent">Connections.</span></h1>
-      <p class="hero-sub">
-        You've invested years building relationships in the most dynamic construction vertical of all: electrical. ECRN is the platform that <strong>rewards you, your network, and every company that hires through you.</strong>
-      </p>
-      <div class="hero-ctas">
-        <button onclick="openModal('signup')" class="btn-hero-p">
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
-          Sign Up
-        </button>
-        <a href="#how-it-works" class="btn-hero-o">
-          See How It Works
-          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+  <div class="hg1"></div><div class="hgrid"></div><div class="hring"></div><div class="hblob"></div>
+  <div class="wrap">
+    <div class="hero-in">
+      <div class="hl">
+        <div class="logo reveal"><img src="https://deltaconstructionpartners.com/wp-content/uploads/2026/03/ECRN-Horizontal-Logo-White.png" alt="ECRN"></div>
+        <div class="pill reveal" style="transition-delay:.08s">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.9 4.6L5.5 9.5l4.6 1.9L12 16l1.9-4.6L18.5 9.5l-4.6-1.9z"/><path d="M5 21v-4M3 19h4M19 17v-4M17 15h4"/></svg>
+          Tampa Bay Creator Casting Call
+        </div>
+        <h1 class="h1 reveal" style="transition-delay:.14s">Become the <span class="ac">Face</span> of ECRN</h1>
+        <p class="hsub reveal" style="transition-delay:.2s">ECRN is looking for a bold local creator to help launch a new referral network brand through Reels, TikToks, Shorts, interviews, and social-first storytelling.</p>
+        <div class="hbadges reveal" style="transition-delay:.24s">
+          <div class="hbc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M20 10c0 7-8 13-8 13S4 17 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><div class="hbc-t">Tampa Bay</div><div class="hbc-s">Local preferred</div></div>
+          <div class="hbc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg><div class="hbc-t">On Camera</div><div class="hbc-s">Strong presence</div></div>
+          <div class="hbc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg><div class="hbc-t">High Upside</div><div class="hbc-s">Long-term role</div></div>
+        </div>
+        <div class="hctas reveal" style="transition-delay:.28s">
+          <a href="#apply" class="btn-p">Apply to Be Considered <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="17" height="17"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          <a href="#role" class="btn-o">See the Role</a>
+        </div>
+        <p class="hnote reveal" style="transition-delay:.32s">Female creators and bilingual English/Spanish creators are strongly encouraged to apply.</p>
       </div>
-    </div>
-  </div>
-  <div class="hero-badge">
-    <div class="hero-badge-num">$10K</div>
-    <div class="hero-badge-label">Up to Per<br>Placement</div>
-  </div>
-</section>
-
-<!-- STATS BAR -->
-<div class="stats-bar">
-  <div class="stats-inner">
-    <div class="stat-item">
-      <div class="stat-num" style="font-size:clamp(22px,2.6vw,34px); line-height:1.15; text-transform:uppercase;">Up to $10,000</div>
-      <div class="stat-text">paid to you every time DCP places your referral</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num" style="font-size:clamp(22px,2.6vw,34px); line-height:1.15; text-transform:uppercase;">You Refer.<br>DCP Places.<br>You Earn.</div>
-      <div class="stat-text">submit a name — we handle everything from vetting to placement</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-num" style="font-size:clamp(22px,2.6vw,34px); line-height:1.15; text-transform:uppercase;">No Cap.<br>No Limit.<br>Keep Earning.</div>
-      <div class="stat-text">refer as many people as you want — every placement pays</div>
-    </div>
-  </div>
-</div>
-
-<!-- WHAT IS ECRN - Image: Job Site 2 in photo column -->
-<section class="what-ecrn" id="about">
-  <div class="container">
-    <div class="what-img reveal">
-      <img src="https://deltaconstructionpartners.com/wp-content/uploads/2026/03/ECRN-Job-Site-2.png" alt="Electrical Construction Job Site">
-      <div class="what-img-badge">Built for This Industry</div>
-    </div>
-    <div class="reveal" style="transition-delay:.15s">
-      <div class="section-label">A Platform that Formalizes What You Already Do</div>
-      <h2 class="section-headline">ECRN Puts Your<br>Connections<br>to Work</h2>
-      <div class="divider"></div>
-      <p class="section-body">
-        Electrical construction professionals have always referred the top leaders and managers in the electrical construction industry. It happens every day: on job sites, over the phone and through years of trust earned through hard work. ECRN is the platform built to recognize this. It gives structure and real compensation to the referrals you're already making every day.
-      </p>
+      <div class="hcard-w reveal" style="transition-delay:.2s">
+        <div class="hcard-glow"></div>
+        <div class="hcard"><div class="hcard-in">
+          <div class="hci-glow"></div><div class="hci-line"></div><div class="hci-sq"></div>
+          <div class="hci-phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+          <div class="hci-cnt">
+            <div class="hci-lbl">Creator Role</div>
+            <div class="hci-ttl">Not a normal social media job.</div>
+            <p class="hci-bd">Content in the office, in the field, on camera, and with real people. Built for someone with personality, confidence, and consistency.</p>
+          </div>
+          <div class="mstats">
+            <div class="ms"><div class="ms-l">Potential</div><div class="ms-v">6-Figure</div></div>
+            <div class="ms"><div class="ms-l">Role Type</div><div class="ms-v">Long-Term</div></div>
+            <div class="ms"><div class="ms-l">Content</div><div class="ms-v">Short-Form</div></div>
+            <div class="ms"><div class="ms-l">Location</div><div class="ms-v">Tampa Bay</div></div>
+          </div>
+        </div></div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- MISSION / VISION BAND -->
-<div class="mv-band">
-  <div class="mv-grid">
-    <div class="mv-card reveal">
-      <div class="mv-label">Our Mission</div>
-      <div class="mv-text">To provide a platform that <span class="accent">powers connections</span> between elite construction professionals.</div>
-      <div class="mv-attr">What we're building today</div>
-    </div>
-    <div class="mv-card reveal" style="transition-delay:.12s">
-      <div class="mv-label">Our Vision</div>
-      <div class="mv-text">To revolutionize the way the electrical construction industry <span class="accent">attracts, recruits, and retains</span> top talent.</div>
-      <div class="mv-attr">Where we're taking the industry</div>
+<!-- ROLE -->
+<section class="role-sec sec" id="role">
+  <div class="wrap">
+    <div class="role-in">
+      <div class="role-l reveal">
+        <div class="eyebrow">The Opportunity</div>
+        <h2>A creator role with real upside.</h2>
+        <p>This is for someone who wants more than random freelance gigs. You'll help shape the public voice of ECRN and become the recognizable personality behind the brand.</p>
+        <a href="#apply" class="btn-p">Apply to Be Considered <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="17" height="17"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+      </div>
+      <div class="feats">
+        <div class="feat reveal" style="transition-delay:.05s"><div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3>High Earning Potential</h3><p>Long-term creator opportunity with performance upside and room to grow with the brand.</p></div>
+        <div class="feat reveal" style="transition-delay:.1s"><div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg></div><h3>Public-Facing Role</h3><p>You are not just posting content. You are becoming the face, voice, and personality people connect with.</p></div>
+        <div class="feat reveal" style="transition-delay:.15s"><div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect x="2" y="6" width="20" height="14" rx="2"/></svg></div><h3>Long-Term Position</h3><p>Designed for someone who wants to build with ECRN, not just complete one-off content jobs.</p></div>
+        <div class="feat reveal" style="transition-delay:.2s"><div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><h3>Brand Visibility</h3><p>Your content can help bring the ECRN story to life across Tampa Bay and beyond.</p></div>
+      </div>
     </div>
   </div>
-</div>
+</section>
 
-<!-- DUAL AUDIENCE -->
-<section class="dual-audience" id="for-you">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label">Built for the People Who Know This Industry Best</div>
-      <h2 class="section-headline">Who ECRN<br>Is Built For</h2>
+<!-- EARN -->
+<section class="earn-sec sec">
+  <div class="ebg"></div><div class="ebg2"></div>
+  <div class="wrap" style="position:relative;z-index:2">
+    <div class="earn-h reveal">
+      <div class="eyebrow">How You Earn</div>
+      <h2>Every referral is real money.</h2>
+      <p>ECRN pays commission on every job placement through the referral network. As the face of the brand, your content drives those referrals — and that means real upside on every win you help bring in.</p>
     </div>
-    <div class="dual-grid">
-      <!-- LEFT: For Professionals -->
-      <div class="aud-card pro reveal" style="transition-delay:.1s">
-        <div class="card-audience">For Electrical<br>Construction<br>Professionals</div>
-        <div class="card-action">Submit. Get Placed. Earn.</div>
-        <p class="card-desc">When your referral is placed, you earn structured compensation — up to $10,000. ECRN handles all vetting, placement, and follow-up.</p>
-        <ul class="card-perks">
-          <li><span class="perk-check">✓</span>Earn up to $10,000 when your referral is hired</li>
-          <li><span class="perk-check">✓</span>Submit in minutes. We take it from there.</li>
-          <li><span class="perk-check">✓</span>See every step of your referral's journey</li>
-          <li><span class="perk-check">✓</span>Built by people who know this industry</li>
-        </ul>
-        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:36px;">
-          <button onclick="openModal('signup')" class="card-cta" style="margin-top:0;">Sign Up</button>
-          <button onclick="openModal('refer')" class="card-cta" style="margin-top:0;background:transparent;color:var(--green);border:1.5px solid var(--green);">Refer a Friend</button>
+    <div class="earn-card reveal" style="transition-delay:.1s">
+      <div class="earn-ci">
+        <div>
+          <div class="per-lbl">Per Job Placement</div>
+          <div class="earn-num">$3K<span class="sep">–</span>$10K</div>
+          <p class="earn-note">Every successful placement through the ECRN referral network pays out $3,000–$10,000 in commission depending on the role.</p>
         </div>
-      </div>
-      <!-- RIGHT: Compensation Tier Infographic -->
-      <div class="aud-card tier-card reveal" style="transition-delay:.2s">
-        <div class="tier-header">
-          <div class="tier-eyebrow">Referral Compensation</div>
-          <div class="tier-heading">What You Earn When<br>Your Referral Is Hired</div>
-          <p class="tier-sub">Compensation is structured by placement level. You earn when your referral lands the job.</p>
-        </div>
-        <div class="tier-list">
-          <div class="tier-item">
-            <div class="tier-badge">Tier 1</div>
-            <div class="tier-body">
-              <div class="tier-title">Skilled Labor</div>
-              <div class="tier-payout">Up to $1,000 per hire</div>
-              <p class="tier-desc">Entry-level and skilled field workers placed in hands-on trade roles.</p>
-              <div class="tier-roles">
-                <span>Wireman</span><span>Journeyman</span><span>Lead Electrician</span>
-              </div>
-            </div>
-          </div>
-          <div class="tier-item">
-            <div class="tier-badge">Tier 2</div>
-            <div class="tier-body">
-              <div class="tier-title">Field Leadership</div>
-              <div class="tier-payout">Up to $2,500 per hire</div>
-              <p class="tier-desc">Lead tradespeople and site supervisors managing crews on active projects.</p>
-              <div class="tier-roles">
-                <span>Foreman</span><span>Superintendent</span><span>Field Professional</span>
-              </div>
-            </div>
-          </div>
-          <div class="tier-item">
-            <div class="tier-badge">Tier 3</div>
-            <div class="tier-body">
-              <div class="tier-title">Project Leadership</div>
-              <div class="tier-payout">Up to $5,000 per hire</div>
-              <p class="tier-desc">Professionals managing full project lifecycles, bids, and contractor relationships.</p>
-              <div class="tier-roles">
-                <span>Project Manager</span><span>Estimator</span>
-              </div>
-            </div>
-          </div>
-          <div class="tier-item">
-            <div class="tier-badge">Tier 4</div>
-            <div class="tier-body">
-              <div class="tier-title">Senior Project Leadership</div>
-              <div class="tier-payout">Up to $7,500 per hire</div>
-              <p class="tier-desc">Senior decision-makers overseeing multiple projects and estimating teams.</p>
-              <div class="tier-roles">
-                <span>Sr. Project Manager</span><span>Chief Estimator</span>
-              </div>
-            </div>
-          </div>
-          <div class="tier-item">
-            <div class="tier-badge">Tier 5</div>
-            <div class="tier-body">
-              <div class="tier-title">Executive Leadership</div>
-              <div class="tier-payout">Up to $10,000 per hire</div>
-              <p class="tier-desc">C-suite and senior executives driving company-wide strategy and operations.</p>
-              <div class="tier-roles">
-                <span>CEO</span><span>COO</span><span>Vice President</span>
-              </div>
-            </div>
-          </div>
+        <div class="erows">
+          <div class="erow"><div class="er-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><div><div class="er-t">You drive the reach</div><p class="er-b">Your Reels, TikToks, Shorts, and interviews get the referral network in front of people.</p></div></div>
+          <div class="erow"><div class="er-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg></div><div><div class="er-t">Referrals come in</div><p class="er-b">When people get placed because of your content, that's a win on the board.</p></div></div>
+          <div class="erow"><div class="er-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div><div class="er-t">You earn on the back end</div><p class="er-b">You have the chance to earn commission on the referrals your content generates. More traction, bigger upside.</p></div></div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="how-it-works" id="how-it-works">
-  <div class="container">
-    <div class="reveal">
-      <div class="section-label">The Process</div>
-      <h2 class="section-headline">One Network<br>Four Steps<br>Real Compensation</h2>
-    </div>
-    <div class="steps-row">
-      <div class="step reveal" style="transition-delay:.05s">
-        <div class="step-num">01</div>
-        <div class="step-dot"></div>
-        <div class="step-title">Join the Network</div>
-        <p class="step-desc">Sign up in minutes. Tell us about yourself and we'll get you set up in the network.</p>
-      </div>
-      <div class="step reveal" style="transition-delay:.12s">
-        <div class="step-num">02</div>
-        <div class="step-dot"></div>
-        <div class="step-title">Get Your Link</div>
-        <p class="step-desc">You receive a personalized referral link. Share it with the professionals in your network - the ones you'd put your name behind.</p>
-      </div>
-      <div class="step reveal" style="transition-delay:.19s">
-        <div class="step-num">03</div>
-        <div class="step-dot"></div>
-        <div class="step-title">We Handle It</div>
-        <p class="step-desc">Delta Construction Partners takes it from there. Vetting, coordination, follow-up. All handled. You put your name behind someone. We make sure it means something.</p>
-      </div>
-      <div class="step reveal" style="transition-delay:.26s">
-        <div class="step-num">04</div>
-        <div class="step-dot"></div>
-        <div class="step-title">Receive Your Payout</div>
-        <p class="step-desc">Once your referral is placed and completes their guarantee period, your referral payout is processed. Up to $10,000.<button class="tc-trigger" onclick="openTC()">*</button></p>
-      </div>
-    </div>
-    <p class="steps-bottom reveal" style="transition-delay:.3s">
-      Join today and start earning every time one of your <strong>referrals is placed.</strong>
-    </p>
-    <div style="text-align:center; margin-top:32px;" class="reveal" style="transition-delay:.38s">
-      <button onclick="openModal('signup')" class="btn-green" style="font-size:14px; padding:14px 40px; letter-spacing:.1em;">
-        Sign Up
-      </button>
+    <div class="earn-ft">
+      <p>This is a creator role with creator economics. Commission structure is discussed during the interview process.</p>
+      <a href="#apply" class="btn-p">Apply to Be Considered <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="17" height="17"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
     </div>
   </div>
 </section>
 
-<!-- WHY ECRN -->
-<section class="why-ecrn">
-  <div class="container">
-    <div class="why-header reveal">
-      <div>
-        <div class="section-label">Why ECRN</div>
-        <h2 class="section-headline">Setting the Standard<br>for Excellence</h2>
-      </div>
-      <div class="why-video-wrap" style="transition-delay:.15s">
-        <video class="why-video" autoplay muted loop playsinline preload="auto">
-          <source src="https://deltaconstructionpartners.com/wp-content/uploads/2026/03/Animated_Logo_With_Electric_Pulse.mp4" type="video/mp4">
-        </video>
-      </div>
+<!-- CONTENT -->
+<section class="cont-sec sec">
+  <div class="wrap">
+    <div class="reveal"><div class="eyebrow">What You'll Create</div><h2>Content people actually want to watch.</h2></div>
+    <div class="ccards">
+      <div class="ccard reveal" style="transition-delay:.05s"><div class="ccard-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></div><div><div class="ccard-t">Reels & TikToks</div><p class="ccard-b">Short-form videos built for attention, retention, and social discovery.</p></div></div>
+      <div class="ccard reveal" style="transition-delay:.1s"><div class="ccard-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg></div><div><div class="ccard-t">Interviews</div><p class="ccard-b">Talk to workers, referral partners, placements, recruiters, and people in the field.</p></div></div>
+      <div class="ccard reveal" style="transition-delay:.15s"><div class="ccard-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></div><div><div class="ccard-t">Brand Stories</div><p class="ccard-b">Bring ECRN's mission, success stories, and referral network to life.</p></div></div>
+      <div class="ccard reveal" style="transition-delay:.2s"><div class="ccard-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><div><div class="ccard-t">Direct Response</div><p class="ccard-b">Create videos that explain the opportunity and drive people to take action.</p></div></div>
     </div>
-    <div class="why-grid">
-      <div class="why-card reveal" style="transition-delay:.05s">
-        <div class="why-num">01 · Exclusive</div>
-        <div class="why-title">Built for the Electrical Construction Industry</div>
-        <p class="why-desc">Not a generic platform - built for and by the professionals who live in this industry every day.</p>
+    <div class="ccta reveal" style="transition-delay:.25s"><a href="#apply" class="btn-p">Apply to Be Considered <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="17" height="17"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
+  </div>
+</section>
+
+<!-- WHO -->
+<section class="who-sec sec">
+  <div class="wrap">
+    <div class="who-in">
+      <div class="wcard reveal">
+        <div class="eyebrow">Who We Want</div>
+        <h2>Bold. Social. Strong on camera.</h2>
+        <p>The right person has natural presence, social instincts, and the confidence to speak to real people on camera without sounding scripted or corporate.</p>
+        <a href="#apply" class="btn-p">Apply to Be Considered <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="17" height="17"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
       </div>
-      <div class="why-card reveal" style="transition-delay:.1s">
-        <div class="why-num">02 · Infrastructure</div>
-        <div class="why-title">Powered by Delta Construction Partners</div>
-        <p class="why-desc">Delta Construction Partners brings 20+ dedicated recruiters and national contractor relationships to every referral in the network.</p>
-      </div>
-      <div class="why-card reveal" style="transition-delay:.15s">
-        <div class="why-num">03 · Compensation</div>
-        <div class="why-title">Structured compensation up to $10,000</div>
-        <p class="why-desc">Real recognition for real connections. You'll see exactly where your referral stands at every stage, from first contact all the way through to placement.</p>
-      </div>
-      <div class="why-card reveal" style="transition-delay:.2s">
-        <div class="why-num">04 · Culture</div>
-        <div class="why-title">ECRN Rewards It</div>
-        <p class="why-desc">Referrals have always been how this industry moves. Good people know good people. ECRN is here to make sure that counts for something.</p>
+      <div class="wlist reveal" style="transition-delay:.1s">
+        <div class="witem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Local to Tampa Bay</span></div>
+        <div class="witem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Strong, natural on-camera presence</span></div>
+        <div class="witem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>High-energy personality</span></div>
+        <div class="witem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Comfortable creating Reels, TikToks, and Shorts</span></div>
+        <div class="witem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Comfortable interviewing people</span></div>
+        <div class="witem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Able to create consistently</span></div>
+        <div class="witem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Can edit short-form videos, or willing to learn</span></div>
+        <div class="witem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Bilingual English/Spanish preferred</span></div>
+        <div class="witem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Female creators strongly encouraged to apply</span></div>
+        <div class="witem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Not looking for a boring desk-only role</span></div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="faq-section" id="faq">
-  <div class="container">
-    <div class="reveal">
-      <div class="faq-subtitle">FAQ</div>
-      <h2 class="section-headline">Questions<br>worth asking</h2>
-    </div>
-    <div class="faq-list reveal" style="transition-delay:.1s">
-      <div class="acc-item">
-        <button class="acc-trigger" aria-expanded="false">
-          <span class="acc-q">How is ECRN different from a staffing agency?</span>
-          <span class="acc-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg></span>
-        </button>
-        <div class="acc-body"><div class="acc-body-inner">ECRN is a structured referral network - not a placement firm. You bring the connection. Delta Construction Partners handles the professional process behind it, and you earn compensation when your referral is placed.</div></div>
+<!-- WHY -->
+<section class="why-sec sec">
+  <div class="wrap">
+    <div class="why-in">
+      <div class="why-l reveal">
+        <div class="eyebrow">Why ECRN</div>
+        <h2>Help launch the brand from the ground up.</h2>
+        <p>ECRN is a referral network being launched under Delta Construction Partners. The creator behind the brand will help make the opportunity feel human, exciting, trusted, and easy to understand.</p>
+        <a href="#apply" class="btn-p">Apply to Be Considered <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="17" height="17"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
       </div>
-      <div class="acc-item">
-        <button class="acc-trigger" aria-expanded="false">
-          <span class="acc-q">Do I need to be actively recruiting to participate?</span>
-          <span class="acc-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg></span>
-        </button>
-        <div class="acc-body"><div class="acc-body-inner">No. You already know great people in this industry. ECRN simply gives you a structured way to share those connections and earn for it when they land.</div></div>
-      </div>
-      <div class="acc-item">
-        <button class="acc-trigger" aria-expanded="false">
-          <span class="acc-q">How does the payout work?</span>
-          <span class="acc-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg></span>
-        </button>
-        <div class="acc-body"><div class="acc-body-inner">Once your referral is placed and completes their guarantee period, your referral payout is processed. Compensation is structured by placement level — up to $10,000 per hire.</div></div>
-      </div>
-      <div class="acc-item">
-        <button class="acc-trigger" aria-expanded="false">
-          <span class="acc-q">Who is ECRN backed by?</span>
-          <span class="acc-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg></span>
-        </button>
-        <div class="acc-body"><div class="acc-body-inner">ECRN is an initiative of Delta Construction Partners - bringing 20+ national recruiters, contractor relationships, and proven placement infrastructure to the referral network.</div></div>
-      </div>
-      <div class="acc-item">
-        <button class="acc-trigger" aria-expanded="false">
-          <span class="acc-q">What does it cost to join?</span>
-          <span class="acc-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg></span>
-        </button>
-        <div class="acc-body"><div class="acc-body-inner">Joining ECRN as a referring professional is free. Contractor subscription details are available upon inquiry.</div></div>
-      </div>
-      <div class="acc-item">
-        <button class="acc-trigger" aria-expanded="false">
-          <span class="acc-q">How quickly can I start submitting referrals?</span>
-          <span class="acc-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg></span>
-        </button>
-        <div class="acc-body"><div class="acc-body-inner">Once you join the network, you receive your personalized referral link immediately and can begin submitting referrals right away. The process is built to be simple and fast.</div></div>
-      </div>
-      <div class="acc-item">
-        <button class="acc-trigger" aria-expanded="false">
-          <span class="acc-q">Do I need any recruiting experience to participate?</span>
-          <span class="acc-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v10M1 6h10" stroke="white" stroke-width="1.8" stroke-linecap="round"/></svg></span>
-        </button>
-        <div class="acc-body"><div class="acc-body-inner">Not at all. You already know great people in this industry. Put your name behind them and submit a referral. Delta Construction Partners handles everything from there.</div></div>
+      <div class="litems reveal" style="transition-delay:.1s">
+        <div class="litem"><div class="li-n">01</div><div><div class="li-t">You help shape the voice</div><p class="li-b">This is not a stale brand with a fixed personality. You'll help define how ECRN shows up socially.</p></div></div>
+        <div class="litem"><div class="li-n">02</div><div><div class="li-t">You become recognizable</div><p class="li-b">The goal is to make you the creator people associate with the brand.</p></div></div>
+        <div class="litem"><div class="li-n">03</div><div><div class="li-t">You create content with purpose</div><p class="li-b">The content is built around real referrals, real people, real placements, and real opportunity.</p></div></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CLOSING CTA - Image: Workers On Site -->
-<section class="closing" id="join">
-  <div class="closing-bg"></div>
-  <div class="closing-wm">#BuiltForLeaders</div>
-  <div class="closing-inner">
-    <div class="closing-hashtag">#BuiltForLeaders  ·  #BuiltOnTrust</div>
-    <h2 class="closing-headline reveal">Your network has value.<br><span class="green">Start getting compensated for it.</span></h2>
-    <p class="closing-body reveal" style="transition-delay:.15s">
-      ECRN is the only structured referral network built exclusively for electrical construction.
-    </p>
-    <div class="closing-ctas reveal" style="transition-delay:.28s">
-      <button onclick="openModal('signup')" class="btn-cp">Sign Up</button>
-      <a href="#how-it-works" class="btn-co">See How It Works</a>
+<!-- APPLY -->
+<section class="apply-sec sec" id="apply">
+  <div class="wrap">
+    <div class="apply-in">
+      <div class="apply-l reveal">
+        <div class="eyebrow">Apply Now</div>
+        <h2>Think you could be the face of ECRN?</h2>
+        <p>Drop your info and social links. We'll review your content and personality from there. If you're a fit, we'll reach out to set up a quick chat.</p>
+        <div class="anote"><strong>Takes under a minute.</strong><p>No video uploads, no hoops. Just share your handles so we can see your vibe and camera presence in action.</p></div>
+      </div>
+      <div class="aform reveal" style="transition-delay:.1s">
+        <div class="fgrid">
+          <div class="fg"><label>Full Name</label><input type="text" placeholder="Jane Creator"></div>
+          <div class="fg"><label>Phone</label><input type="tel" placeholder="(555) 555-5555"></div>
+          <div class="fg"><label>Email</label><input type="email" placeholder="you@email.com"></div>
+          <div class="fg"><label>City / Area</label><input type="text" placeholder="Tampa, St. Pete, Clearwater..."></div>
+          <div class="fg"><label>Instagram Link</label><input type="url" placeholder="https://instagram.com/..."></div>
+          <div class="fg"><label>TikTok Link</label><input type="url" placeholder="https://tiktok.com/@..."></div>
+          <div class="fg"><label>Are you bilingual?</label><select><option>Select one</option><option>Yes</option><option>No</option><option>Somewhat</option></select></div>
+          <div class="fg"><label>Can you edit videos?</label><select><option>Select one</option><option>Yes</option><option>No</option><option>Basic edits</option></select></div>
+          <div class="fg full"><label>Familiarity with ad content for businesses?</label><select><option>Select one</option><option>Very familiar — I've made ads before</option><option>Somewhat familiar</option><option>A little — I've seen examples</option><option>Not familiar yet, but eager to learn</option></select></div>
+          <div class="fg full"><label>Why would you be a strong fit for ECRN?</label><textarea rows="5" placeholder="Tell us about your personality, camera presence, content experience, and why this role interests you."></textarea></div>
+        </div>
+        <div class="fbottom">
+          <button class="bsub" type="button">Submit Application</button>
+          <p class="fdis">Connect this form to your CRM, GHL, or form tool before launch.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-sec sec">
+  <div class="wrap">
+    <div class="faq-hd reveal"><div class="eyebrow">FAQ</div><h2>Questions worth asking.</h2></div>
+    <div class="faq-list">
+      <div class="faq-it reveal" style="transition-delay:.05s"><h3>Do I need a huge following?</h3><p>No. A large following is a plus, but camera presence, consistency, personality, and content instincts matter more.</p></div>
+      <div class="faq-it reveal" style="transition-delay:.1s"><h3>Is this a normal social media manager job?</h3><p>No. This is a creator and on-camera brand personality role. The focus is creating content, interviewing people, and bringing ECRN to life socially.</p></div>
+      <div class="faq-it reveal" style="transition-delay:.15s"><h3>Do I need construction experience?</h3><p>No. You need to be comfortable learning, asking questions, and creating content around real people and real stories.</p></div>
+      <div class="faq-it reveal" style="transition-delay:.2s"><h3>Is bilingual required?</h3><p>Bilingual English/Spanish is preferred and a strong advantage, but not required.</p></div>
+      <div class="faq-it reveal" style="transition-delay:.25s"><h3>Is this long term?</h3><p>Yes. This is a long-term creator role with real room to grow with ECRN.</p></div>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer>
-  <div class="footer-logo">
+<div class="wrap">
+  <div class="footer">
     <img src="https://deltaconstructionpartners.com/wp-content/uploads/2026/03/ECRN-Horizontal-Logo-White.png" alt="ECRN">
-  </div>
-  <div class="footer-copy">A Delta Construction Partners Initiative &nbsp;·&nbsp; deltaecrn.com &nbsp;·&nbsp; <button onclick="openTC()" class="tc-footer-btn">Terms &amp; Conditions</button></div>
-  <div class="footer-tag">#BuiltForLeaders</div>
-</footer>
-
-<!-- Sign Up Modal -->
-<div class="modal-overlay" id="modal-signup" onclick="closeModalOutside(event,'modal-signup')">
-  <div class="modal-box">
-    <div class="modal-header">
-      <div>
-        <div class="modal-title">Join ECRN</div>
-        <div class="modal-subtitle">Sign up and start earning for every referral you place.</div>
-      </div>
-      <button class="modal-close" onclick="closeModal('signup')">✕</button>
-    </div>
-    <div class="modal-body">
-      <iframe id="company_join" style="width:100%;min-height:900px;border:none;" allow="web-share"></iframe>
-    </div>
-  </div>
-</div>
-
-<!-- Refer a Friend Modal -->
-<div class="modal-overlay" id="modal-refer" onclick="closeModalOutside(event,'modal-refer')">
-  <div class="modal-box">
-    <div class="modal-header">
-      <div>
-        <div class="modal-title">Refer a Friend</div>
-        <div class="modal-subtitle">Put your name behind someone great. They get placed. You get paid.</div>
-      </div>
-      <button class="modal-close" onclick="closeModal('refer')">✕</button>
-    </div>
-    <div class="modal-body">
-      <iframe id="company_join_and_refer" style="width:100%;min-height:1200px;border:none;" allow="web-share"></iframe>
-    </div>
-  </div>
-</div>
-
-<!-- Terms & Conditions Modal -->
-<div class="modal-overlay" id="modal-tc" onclick="closeModalOutside(event,'modal-tc')">
-  <div class="modal-box" style="max-width:760px;">
-    <div class="modal-header">
-      <div>
-        <div class="modal-title">Terms &amp; Conditions</div>
-        <div class="modal-subtitle">ECRN Referral Compensation Program — Effective April 2026</div>
-      </div>
-      <button class="modal-close" onclick="closeTC()">✕</button>
-    </div>
-    <div class="tc-modal-body">
-      <h3>1. Program Overview</h3>
-      <p>The Electrical Construction Referral Network (ECRN) is a structured referral compensation program operated by Delta Construction Partners. By participating in the ECRN referral program, you agree to these Terms and Conditions in their entirety.</p>
-
-      <h3>2. Eligibility</h3>
-      <p>To participate, you must be a registered member of the ECRN network in good standing. Participants must be 18 years of age or older and legally authorized to work in the United States. Employees and immediate family members of Delta Construction Partners are not eligible to receive referral compensation.</p>
-
-      <h3>3. Referral Compensation Structure</h3>
-      <p>Referral compensation through ECRN is variable and determined at the sole discretion of Delta Construction Partners. Any compensation figures displayed on this site or in ECRN materials are <strong>estimates only</strong> and are provided for illustrative purposes. Actual compensation may be higher or lower depending on the role, client, placement terms, and other factors.</p>
-      <p>Compensation is generally structured by placement level. The tiers below represent estimated ranges and do not constitute a guarantee or binding offer:</p>
-      <p><strong>Tier 1 — Skilled Labor:</strong> Up to $1,000 per successful placement. Includes wiremen, journeymen, and lead electricians placed in field roles.</p>
-      <p><strong>Tier 2 — Field Leadership:</strong> Up to $2,500 per successful placement. Includes foremen, superintendents, and field professionals managing crews on active projects.</p>
-      <p><strong>Tier 3 — Project Leadership:</strong> Up to $5,000 per successful placement. Includes project managers and estimators managing full project lifecycles.</p>
-      <p><strong>Tier 4 — Senior Project Leadership:</strong> Up to $7,500 per successful placement. Includes senior project managers and chief estimators overseeing multiple projects.</p>
-      <p><strong>Tier 5 — Executive Leadership:</strong> Up to $10,000 per successful placement. Includes CEOs, COOs, and vice presidents driving company-wide strategy.</p>
-      <p>All compensation amounts are estimates. Final payout amounts will be confirmed in writing by Delta Construction Partners prior to processing. ECRN reserves the right to adjust compensation at any time without prior notice.</p>
-
-      <h3>4. No Guarantee of Compensation</h3>
-      <p>Participation in the ECRN referral program does not guarantee any compensation. Referral payouts are contingent upon successful placement, completion of the guarantee period, and final approval by Delta Construction Partners. The display of estimated compensation figures on the ECRN website or in any ECRN materials does not constitute a promise, commitment, or binding agreement to pay any specific amount.</p>
-
-      <h3>5. Payout Conditions</h3>
-      <p>Referral compensation is paid only upon successful placement and completion of the guarantee period as defined by Delta Construction Partners at the time of placement. The guarantee period is typically <strong>90 days</strong> from the referred individual's start date, during which the placement must remain active and in good standing.</p>
-      <p>If a placed individual leaves or is terminated before completing the guarantee period, no compensation will be issued or any previously issued compensation may be subject to recoupment at Delta Construction Partners' discretion.</p>
-
-      <h3>6. Referral Submission</h3>
-      <p>All referrals must be submitted through the official ECRN referral platform. Referrals submitted through unofficial channels will not be eligible for compensation. Duplicate referrals for the same individual will be attributed to the first verified submission on record.</p>
-
-      <h3>7. Tax Responsibility</h3>
-      <p>Referral compensation may be considered taxable income. Participants are solely responsible for reporting and remitting any applicable federal, state, or local taxes on referral compensation received. Delta Construction Partners will issue a Form 1099 for compensation totaling $600 or more in a calendar year where required by law.</p>
-
-      <h3>8. Program Modifications</h3>
-      <p>Delta Construction Partners reserves the right to modify, suspend, or terminate the ECRN referral compensation program at any time, with or without notice. Changes to compensation tiers or eligibility requirements will be communicated via the ECRN platform or by direct notification to registered members.</p>
-
-      <h3>9. Dispute Resolution</h3>
-      <p>Any disputes regarding referral compensation must be submitted in writing to Delta Construction Partners within 30 days of the disputed event. Delta Construction Partners' determination on all compensation disputes is final.</p>
-
-      <h3>10. Governing Law</h3>
-      <p>These Terms and Conditions are governed by the laws of the State of Florida. Any legal action arising out of or related to this program shall be brought exclusively in the state or federal courts located in Florida.</p>
-
-      <h3>11. Contact</h3>
-      <p>Questions regarding these Terms and Conditions or the ECRN referral program should be directed to Delta Construction Partners at <strong>deltaecrn.com</strong>.</p>
-
-      <p style="margin-top:28px; font-size:12px; color:rgba(255,255,255,.3);">* These terms are provided for informational purposes and are subject to final review and approval by Delta Construction Partners legal counsel prior to program launch. Sample terms only — not yet legally binding.</p>
+    <div class="footer-r">
+      <div>A Delta Construction Partners Initiative · deltaecrn.com</div>
+      <div style="margin-top:4px;color:var(--g);font-weight:700">#BuiltForLeaders</div>
     </div>
   </div>
 </div>
 
 <script>
-  const nav = document.getElementById('navbar');
-  window.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 24), { passive: true });
+window.addEventListener('load',function(){
+  var s=document.getElementById('splash');
+  setTimeout(function(){s.classList.add('hide');setTimeout(function(){s.remove()},450)},700);
+});
+var els=document.querySelectorAll('.reveal');
+var obs=new IntersectionObserver(function(en){
+  en.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);}});
+},{threshold:0.08,rootMargin:'0px 0px -36px 0px'});
+els.forEach(function(el){obs.observe(el);});
 
-  // Only apply scroll reveal animation if not in an iframe/preview
-  if (window.self === window.top) {
-    const revEls = document.querySelectorAll('.reveal');
-    revEls.forEach(el => el.classList.add('js-reveal'));
-    const revObs = new IntersectionObserver(entries => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revObs.unobserve(e.target); } });
-    }, { threshold: 0.05, rootMargin: '0px 0px 0px 0px' });
-    revEls.forEach(el => revObs.observe(el));
+// GHL webhook form submission
+document.querySelector('.bsub').addEventListener('click', function() {
+  var btn = this;
+  var form = document.querySelector('.aform');
+
+  var fullName = form.querySelector('input[type="text"]').value.trim();
+  var nameParts = fullName.split(' ');
+  var firstName = nameParts[0] || '';
+  var lastName = nameParts.slice(1).join(' ') || '';
+  var phone = form.querySelector('input[type="tel"]').value.trim();
+  var email = form.querySelector('input[type="email"]').value.trim();
+  var inputs = form.querySelectorAll('input[type="text"]');
+  var city = inputs[1] ? inputs[1].value.trim() : '';
+  var urlInputs = form.querySelectorAll('input[type="url"]');
+  var instagram = urlInputs[0] ? urlInputs[0].value.trim() : '';
+  var tiktok = urlInputs[1] ? urlInputs[1].value.trim() : '';
+  var selects = form.querySelectorAll('select');
+  var bilingual = selects[0] ? selects[0].value : '';
+  var canEdit = selects[1] ? selects[1].value : '';
+  var adFamiliarity = selects[2] ? selects[2].value : '';
+  var whyFit = form.querySelector('textarea').value.trim();
+
+  if (!firstName || !email || !phone) {
+    alert('Please fill in your name, email, and phone before submitting.');
+    return;
   }
 
-  const statNums = document.querySelectorAll('.stat-num');
-  const statObs = new IntersectionObserver(entries => {
-    entries.forEach(e => { if (e.isIntersecting) { e.target.style.animation = 'countUp .55s ease both'; statObs.unobserve(e.target); } });
-  }, { threshold: 0.5 });
-  statNums.forEach(el => statObs.observe(el));
+  btn.textContent = 'Submitting...';
+  btn.disabled = true;
 
-  // Accordion
-  document.querySelectorAll('.acc-trigger').forEach(trigger => {
-    trigger.addEventListener('click', () => {
-      const item = trigger.closest('.acc-item');
-      const body = item.querySelector('.acc-body');
-      const isOpen = item.classList.contains('open');
-      document.querySelectorAll('.acc-item.open').forEach(open => {
-        open.classList.remove('open');
-        open.querySelector('.acc-body').style.maxHeight = '0';
-        open.querySelector('.acc-trigger').setAttribute('aria-expanded', 'false');
-      });
-      if (!isOpen) {
-        item.classList.add('open');
-        body.style.maxHeight = body.scrollHeight + 'px';
-        trigger.setAttribute('aria-expanded', 'true');
-      }
-    });
+  var payload = {
+    firstName: firstName,
+    lastName: lastName,
+    name: fullName,
+    phone: phone,
+    email: email,
+    city: city,
+    instagram: instagram,
+    tiktok: tiktok,
+    bilingual: bilingual,
+    canEditVideos: canEdit,
+    adFamiliarity: adFamiliarity,
+    whyFit: whyFit,
+    source: 'ECRN Creators Landing Page'
+  };
+
+  fetch('https://services.leadconnectorhq.com/hooks/7OQ0NuvNtfSL8r6AcNGa/webhook-trigger/5553dac5-eaa5-41ce-a2c3-714fcbab76ac', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(payload)
+  })
+  .then(function() {
+    if (typeof fbq === 'function') { fbq('track', 'Lead'); }
+    form.innerHTML = '<div style="text-align:center;padding:60px 20px">'
+      + '<div style="font-size:48px;margin-bottom:16px">✅</div>'
+      + '<div style="font-weight:900;font-size:26px;margin-bottom:12px">Application Received</div>'
+      + '<p style="font-weight:300;font-size:16px;color:rgba(255,255,255,.6);line-height:1.7">Thanks ' + firstName + ' — we\'ll review your profile and reach out if you\'re a fit.</p>'
+      + '</div>';
+  })
+  .catch(function() {
+    btn.textContent = 'Submit Application';
+    btn.disabled = false;
+    alert('Something went wrong. Please try again.');
   });
-
-  // Modal logic
-  let signupLoaded = false;
-  let referLoaded = false;
-
-  function openTC() {
-    document.body.style.overflow = 'hidden';
-    document.getElementById('modal-tc').classList.add('active');
-  }
-
-  function closeTC() {
-    document.getElementById('modal-tc').classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  function openModal(type) {
-    document.body.style.overflow = 'hidden';
-    if (type === 'signup') {
-      document.getElementById('modal-signup').classList.add('active');
-      if (!signupLoaded) {
-        const params = new URLSearchParams(window.location.search);
-        const utmQuery = [];
-        ["utm_source","utm_medium","utm_campaign","utm_term","utm_content"].forEach(p => {
-          if (params.get(p)) utmQuery.push(`${p}=${encodeURIComponent(params.get(p))}`);
-        });
-        const baseUrl = "https://deltaconstructionpartners.staffingreferrals.com/company/join_iframe?";
-        document.getElementById("company_join").src = utmQuery.length ? `${baseUrl}&${utmQuery.join("&")}` : baseUrl;
-        signupLoaded = true;
-      }
-    } else if (type === 'refer') {
-      document.getElementById('modal-refer').classList.add('active');
-      if (!referLoaded) {
-        const params = new URLSearchParams(window.location.search);
-        const utmQuery = [];
-        ["utm_source","utm_medium","utm_campaign","utm_term","utm_content"].forEach(p => {
-          if (params.get(p)) utmQuery.push(`${p}=${encodeURIComponent(params.get(p))}`);
-        });
-        const baseUrl = "https://deltaconstructionpartners.staffingreferrals.com/company/join_and_refer_iframe?";
-        document.getElementById("company_join_and_refer").src = utmQuery.length ? `${baseUrl}&${utmQuery.join("&")}` : baseUrl;
-        referLoaded = true;
-      }
-    }
-  }
-
-  function closeModal(type) {
-    document.getElementById('modal-' + type).classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  function closeModalOutside(e, id) {
-    if (e.target === document.getElementById(id)) {
-      document.getElementById(id).classList.remove('active');
-      document.body.style.overflow = '';
-    }
-  }
-
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape') {
-      ['signup','refer'].forEach(closeModal);
-      closeTC();
-      document.body.style.overflow = '';
-    }
-  });
+});
 </script>
 </body>
 </html>
