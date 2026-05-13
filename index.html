@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1"/>
-<title>ECRN — Become the Face of ECRN | Tampa Bay Creator Casting Call</title>
+<title>Get Paid To Create In Tampa Bay | ECRN Creator Casting Call</title>
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -51,6 +51,22 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
 .btn-p svg{transition:transform .2s}.btn-p:hover svg{transform:translateX(4px)}
 .btn-o{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.05);color:#fff;font-weight:700;font-size:14px;letter-spacing:.07em;text-transform:uppercase;padding:15px 30px;border-radius:14px;border:1px solid rgba(255,255,255,.15);cursor:pointer;transition:background .2s}
 .btn-o:hover{background:rgba(255,255,255,.1)}
+/* BRAND BAR */
+.brand-bar{position:relative;z-index:5;background:#000;border-bottom:1px solid rgba(67,201,112,.15);padding:18px 0}
+.brand-bar-in{display:flex;align-items:center;justify-content:center;gap:24px}
+.brand-side{display:flex;flex-direction:column;align-items:center;gap:4px}
+.brand-delta{max-height:42px;max-width:180px;width:auto;height:auto;filter:brightness(0) invert(1);opacity:.95}
+.brand-pipe{width:1px;height:38px;background:linear-gradient(to bottom,transparent,rgba(67,201,112,.4),transparent)}
+.brand-eyebrow{font-weight:700;font-size:9px;letter-spacing:.32em;text-transform:uppercase;color:var(--g)}
+.brand-ecrn{font-weight:900;font-size:14px;letter-spacing:.06em;text-transform:uppercase;color:#fff}
+@media(max-width:640px){
+  .brand-bar{padding:12px 0}
+  .brand-bar-in{gap:14px}
+  .brand-delta{max-height:32px;max-width:140px}
+  .brand-pipe{height:30px}
+  .brand-eyebrow{font-size:8px;letter-spacing:.26em}
+  .brand-ecrn{font-size:12px}
+}
 /* HERO */
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;padding:120px 0 80px}
 .hg1{position:absolute;inset:0;pointer-events:none;background:radial-gradient(circle at 75% 25%,rgba(67,201,112,.2) 0%,transparent 34%),radial-gradient(circle at 15% 80%,rgba(67,201,112,.13) 0%,transparent 30%)}
@@ -76,72 +92,49 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
 .hcard-w{position:relative}
 .hcard-glow{position:absolute;inset:-24px;border-radius:48px;background:rgba(67,201,112,.16);filter:blur(60px)}
 .hcard{position:relative;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);border-radius:40px;padding:16px;backdrop-filter:blur(20px)}
-.hcard-in{border-radius:28px;overflow:hidden;position:relative;background:linear-gradient(135deg,#1a1a1a,#000,#111);min-height:580px;padding:24px;display:flex;flex-direction:column;justify-content:space-between}
-.hci-glow{position:absolute;right:-80px;top:-80px;width:280px;height:280px;border-radius:50%;background:rgba(67,201,112,.18);filter:blur(60px)}
-.hci-line{position:absolute;left:32px;right:32px;bottom:160px;height:1px;background:rgba(67,201,112,.22)}
-.hci-sq{position:absolute;right:24px;bottom:24px;width:120px;height:120px;border-radius:20px;border:1px solid rgba(67,201,112,.22);transform:rotate(45deg)}
-.hci-phone{align-self:flex-end;border:1px solid rgba(67,201,112,.22);background:rgba(0,0,0,.6);border-radius:20px;padding:14px}
-.hci-phone svg{width:36px;height:36px;color:var(--g)}
-.hci-cnt{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.06);border-radius:20px;padding:22px;backdrop-filter:blur(16px);position:relative;z-index:2}
-.hci-lbl{font-size:11px;font-weight:700;letter-spacing:.25em;text-transform:uppercase;color:var(--g)}
-.hci-ttl{font-weight:900;font-size:26px;line-height:1.1;margin-top:10px}
-.hci-bd{font-weight:300;font-size:14px;color:rgba(255,255,255,.6);line-height:1.65;margin-top:10px}
-.mstats{display:grid;grid-template-columns:1fr 1fr;gap:12px;position:relative;z-index:2}
-.ms{border:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.5);border-radius:14px;padding:16px}
-.ms-l{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:rgba(255,255,255,.38)}
-.ms-v{font-weight:900;font-size:20px;color:var(--g);margin-top:6px}
-/* ROLE */
-.role-sec{background:var(--bk);border-top:1px solid rgba(255,255,255,.08)}
-.role-in{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px}
-.role-l h2{font-weight:900;font-size:clamp(34px,4.2vw,52px);line-height:1.05;letter-spacing:-.02em;margin:14px 0 18px}
-.role-l p{font-weight:300;font-size:17px;color:rgba(255,255,255,.65);line-height:1.75;margin-bottom:28px}
-.feats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.feat{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);border-radius:20px;padding:22px;transition:background .2s}
-.feat:hover{background:rgba(255,255,255,.07)}
-.feat-ic{width:44px;height:44px;border-radius:14px;background:rgba(67,201,112,.1);border:1px solid rgba(67,201,112,.2);display:flex;align-items:center;justify-content:center;color:var(--g)}
-.feat-ic svg{width:22px;height:22px}
-.feat h3{font-weight:900;font-size:17px;margin:14px 0 7px}
-.feat p{font-weight:300;font-size:14px;color:rgba(255,255,255,.6);line-height:1.65}
-/* EARN */
-.earn-sec{border-top:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden}
-.ebg{position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,rgba(67,201,112,.15) 0%,transparent 55%);pointer-events:none}
-.ebg2{position:absolute;left:-80px;top:50%;width:420px;height:420px;border-radius:50%;background:rgba(67,201,112,.07);filter:blur(80px);pointer-events:none}
-.earn-h{text-align:center;max-width:680px;margin:0 auto 48px}
-.earn-h h2{font-weight:900;font-size:clamp(34px,4.2vw,52px);line-height:1.05;letter-spacing:-.02em;margin:14px 0 18px}
-.earn-h p{font-weight:300;font-size:17px;color:rgba(255,255,255,.68);line-height:1.75}
-.earn-card{border:1px solid rgba(67,201,112,.25);background:linear-gradient(135deg,rgba(67,201,112,.11),rgba(67,201,112,.04),transparent);border-radius:28px;padding:44px;backdrop-filter:blur(20px)}
-.earn-ci{display:grid;grid-template-columns:1fr 1.1fr;gap:44px;align-items:center}
-.per-lbl{font-size:11px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--g)}
-.earn-num{font-weight:900;font-size:clamp(56px,8vw,96px);line-height:.9;letter-spacing:-.03em;color:var(--g);margin:12px 0}
-.earn-num .sep{color:rgba(255,255,255,.22);font-size:.65em;margin:0 4px}
-.earn-note{font-weight:300;font-size:14px;color:rgba(255,255,255,.58);line-height:1.65;max-width:280px}
-.erows{display:flex;flex-direction:column;gap:12px}
-.erow{display:flex;gap:14px;align-items:flex-start;border:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.4);border-radius:16px;padding:16px;backdrop-filter:blur(16px)}
-.er-ic{width:42px;height:42px;border-radius:12px;flex-shrink:0;background:rgba(67,201,112,.1);border:1px solid rgba(67,201,112,.22);display:flex;align-items:center;justify-content:center;color:var(--g)}
-.er-ic svg{width:18px;height:18px}
-.er-t{font-weight:900;font-size:15px;margin-bottom:4px}
-.er-b{font-weight:300;font-size:13px;color:rgba(255,255,255,.58);line-height:1.6}
-.earn-ft{display:flex;align-items:center;justify-content:center;gap:24px;margin-top:32px;flex-wrap:wrap}
-.earn-ft p{font-size:14px;color:rgba(255,255,255,.48);max-width:460px;text-align:center}
-/* CONTENT */
-.cont-sec{background:rgba(255,255,255,.02);border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}
-.cont-sec h2{font-weight:900;font-size:clamp(34px,4.2vw,52px);line-height:1.05;letter-spacing:-.02em;margin:14px 0 44px}
-.ccards{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.ccard{border:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.5);border-radius:20px;padding:22px;min-height:210px;display:flex;flex-direction:column;justify-content:space-between}
-.ccard-ic{color:var(--g)}.ccard-ic svg{width:34px;height:34px}
-.ccard-t{font-weight:900;font-size:19px;margin-bottom:7px}
-.ccard-b{font-weight:300;font-size:14px;color:rgba(255,255,255,.58);line-height:1.65}
-.ccta{display:flex;justify-content:center;margin-top:44px}
+.dcard{position:relative;border-radius:28px;overflow:hidden;background:linear-gradient(155deg,#0c1f12,#000 50%,#0a0a0a);border:1px solid rgba(67,201,112,.22);padding:32px 28px;display:flex;flex-direction:column;backdrop-filter:blur(20px)}
+.dcard-glow{position:absolute;right:-80px;top:-80px;width:280px;height:280px;border-radius:50%;background:rgba(67,201,112,.16);filter:blur(70px);pointer-events:none}
+.dcard-verified{position:absolute;top:18px;right:18px;display:inline-flex;align-items:center;gap:6px;background:rgba(67,201,112,.14);border:1px solid rgba(67,201,112,.35);color:var(--g);font-weight:700;font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:6px 10px;border-radius:999px;z-index:2}
+.dcard-eyebrow{position:relative;z-index:2;font-weight:700;font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:rgba(255,255,255,.5);margin-bottom:14px}
+.dcard-logo{position:relative;z-index:2;max-height:72px;max-width:240px;width:auto;height:auto;margin-bottom:16px;filter:brightness(0) invert(1);opacity:.95}
+.dcard-tagline{position:relative;z-index:2;font-weight:700;font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--g);margin-bottom:22px;padding-bottom:22px;border-bottom:1px solid rgba(67,201,112,.18)}
+.dcard-body{position:relative;z-index:2;font-weight:300;font-size:14px;color:rgba(255,255,255,.72);line-height:1.65;margin-bottom:22px}
+.dcard-body strong{font-weight:700;color:#fff}
+.dcard-comp{position:relative;z-index:2;display:flex;flex-direction:column;gap:8px}
+.dc-row{display:flex;justify-content:space-between;align-items:center;padding:12px 14px;border:1px solid rgba(255,255,255,.08);background:rgba(0,0,0,.35);border-radius:12px}
+.dc-row-total{border-color:rgba(67,201,112,.4);background:linear-gradient(135deg,rgba(67,201,112,.14),rgba(67,201,112,.04));margin-top:4px}
+.dc-lbl{font-weight:600;font-size:12px;letter-spacing:.04em;color:rgba(255,255,255,.6);text-transform:uppercase}
+.dc-val{font-weight:900;font-size:14px;color:#fff}
+.dc-val-big{font-size:18px;color:var(--g)}
+
+/* COMP */
+.comp-sec{border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08);position:relative;overflow:hidden;background:rgba(255,255,255,.01)}
+.comp-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 50% 30%,rgba(67,201,112,.13) 0%,transparent 60%);pointer-events:none}
+.comp-head{text-align:center;max-width:640px;margin:0 auto 40px}
+.comp-head h2{font-weight:900;font-size:clamp(28px,3.8vw,46px);line-height:1.05;letter-spacing:-.02em;margin:14px 0 14px}
+.comp-head p{font-weight:300;font-size:16px;color:rgba(255,255,255,.65);line-height:1.6}
+.comp-grid{display:flex;align-items:stretch;justify-content:center;gap:14px;max-width:920px;margin:0 auto;flex-wrap:nowrap}
+.comp-stat{flex:1;border:1px solid rgba(67,201,112,.22);background:rgba(67,201,112,.06);border-radius:20px;padding:24px 16px;text-align:center;backdrop-filter:blur(10px)}
+.comp-num{font-weight:900;font-size:clamp(20px,2.6vw,32px);line-height:1.05;color:var(--g);margin-bottom:6px}
+.comp-lbl{font-weight:600;font-size:12px;letter-spacing:.06em;color:rgba(255,255,255,.65);text-transform:uppercase}
+.comp-plus{display:flex;align-items:center;font-weight:900;font-size:24px;color:rgba(67,201,112,.5);padding:0 4px}
+.comp-total{text-align:center;margin-top:36px;padding:28px 20px;border:1px solid rgba(67,201,112,.35);background:linear-gradient(135deg,rgba(67,201,112,.15),rgba(67,201,112,.05));border-radius:20px;max-width:600px;margin-left:auto;margin-right:auto}
+.comp-total-lbl{font-weight:700;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:8px}
+.comp-total-num{font-weight:900;font-size:clamp(28px,4.2vw,42px);line-height:1;letter-spacing:-.02em;color:var(--g)}
+.comp-cta{display:flex;justify-content:center;margin-top:28px}
+@media(max-width:640px){
+  .comp-grid{flex-direction:column;gap:8px}
+  .comp-plus{justify-content:center;padding:0}
+  .comp-stat{padding:18px 16px}
+}
 /* WHO */
 .who-sec{border-top:1px solid rgba(255,255,255,.08)}
-.who-in{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
-.wcard{border:1px solid rgba(67,201,112,.2);background:rgba(67,201,112,.08);border-radius:28px;padding:40px;position:sticky;top:32px}
-.wcard h2{font-weight:900;font-size:clamp(30px,3.4vw,42px);line-height:1.05;margin:14px 0 18px}
-.wcard p{font-weight:300;font-size:16px;color:rgba(255,255,255,.7);line-height:1.75;margin-bottom:26px}
-.wlist{display:flex;flex-direction:column;gap:10px}
-.witem{display:flex;align-items:center;gap:14px;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);border-radius:14px;padding:13px 18px}
-.witem svg{width:19px;height:19px;color:var(--g);flex-shrink:0}
-.witem span{font-size:16px;color:rgba(255,255,255,.8)}
+.who-tight{max-width:720px;margin:0 auto}
+.wlist-tight{display:grid;grid-template-columns:1fr 1fr;gap:10px;max-width:640px;margin:0 auto}
+.witem{display:flex;align-items:center;gap:12px;border:1px solid rgba(67,201,112,.18);background:rgba(67,201,112,.05);border-radius:14px;padding:14px 16px}
+.witem svg{width:18px;height:18px;color:var(--g);flex-shrink:0}
+.witem span{font-size:15px;color:rgba(255,255,255,.85);font-weight:600}
+@media(max-width:640px){.wlist-tight{grid-template-columns:1fr}}
 /* WHY */
 .why-sec{background:linear-gradient(to bottom,rgba(255,255,255,.02),#000);border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.08)}
 .why-in{display:grid;grid-template-columns:.9fr 1.1fr;gap:48px;align-items:center}
@@ -152,7 +145,7 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
 .li-n{font-weight:900;font-size:22px;color:var(--g);flex-shrink:0}
 .li-t{font-weight:900;font-size:17px;margin-bottom:5px}
 .li-b{font-weight:300;font-size:14px;color:rgba(255,255,255,.58);line-height:1.65}
-/* APPLY */
+
 .apply-sec{border-top:1px solid rgba(255,255,255,.08)}
 .apply-in{display:grid;grid-template-columns:.95fr 1.05fr;gap:48px;align-items:start}
 .apply-l h2{font-weight:900;font-size:clamp(34px,4.2vw,52px);line-height:1.05;letter-spacing:-.02em;margin:14px 0 18px}
@@ -160,7 +153,30 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
 .anote{border:1px solid rgba(67,201,112,.2);background:rgba(67,201,112,.08);border-radius:18px;padding:20px}
 .anote strong{font-weight:900;font-size:19px;display:block;margin-bottom:7px}
 .anote p{font-weight:300;font-size:14px;color:rgba(255,255,255,.68);line-height:1.65}
+/* PHONE GATE BOX */
+.gate-box{display:flex;align-items:flex-start;gap:14px;margin-top:14px;border:1px dashed rgba(67,201,112,.4);background:rgba(67,201,112,.04);border-radius:14px;padding:16px 18px}
+.gate-icon{flex-shrink:0;width:40px;height:40px;border-radius:10px;background:rgba(67,201,112,.12);border:1px solid rgba(67,201,112,.3);display:flex;align-items:center;justify-content:center;color:var(--g)}
+.gate-text{display:flex;flex-direction:column;gap:4px}
+.gate-text strong{font-weight:900;font-size:15px;color:#fff}
+.gate-text span{font-weight:300;font-size:13px;color:rgba(255,255,255,.65);line-height:1.55}
+.gate-text em{font-style:normal;color:var(--g);font-weight:700}
 .aform{border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.04);border-radius:26px;padding:30px;backdrop-filter:blur(20px)}
+.form-note-bar{display:flex;align-items:center;gap:14px;margin-bottom:18px;padding-bottom:16px;border-bottom:1px solid rgba(255,255,255,.08);flex-wrap:wrap}
+.fnb-req{font-weight:700;font-size:12px;color:var(--g);letter-spacing:.05em}
+.fnb-opt{font-weight:400;font-size:12px;color:rgba(255,255,255,.45)}
+.req{color:var(--g);font-weight:900;margin-left:2px}
+.opt{font-weight:400;font-size:11px;color:rgba(255,255,255,.4);margin-left:6px;letter-spacing:.02em}
+/* COLLAPSIBLE OPTIONAL SECTION */
+.more-info{margin-top:16px;border:1px solid rgba(67,201,112,.18);border-radius:14px;background:rgba(67,201,112,.04);overflow:hidden;transition:background .2s}
+.more-info[open]{background:rgba(255,255,255,.02)}
+.more-info summary{list-style:none;cursor:pointer;padding:16px 18px;display:grid;grid-template-columns:1fr auto;align-items:center;gap:8px;user-select:none}
+.more-info summary::-webkit-details-marker{display:none}
+.more-info summary:hover{background:rgba(255,255,255,.03)}
+.mi-title{grid-column:1;font-weight:900;font-size:14px;color:#fff;letter-spacing:.02em}
+.mi-sub{grid-column:1;grid-row:2;font-weight:400;font-size:12px;color:rgba(255,255,255,.5);margin-top:2px}
+.mi-chev{grid-column:2;grid-row:1/3;color:var(--g);display:flex;align-items:center;transition:transform .25s}
+.more-info[open] .mi-chev{transform:rotate(180deg)}
+.mi-grid{padding:4px 18px 20px;border-top:1px solid rgba(67,201,112,.12);margin-top:0}
 .fgrid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .fg{display:flex;flex-direction:column;gap:7px}
 .fg.full{grid-column:1/-1}
@@ -168,6 +184,7 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
 .fg input,.fg select,.fg textarea{background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:12px 15px;font-family:'Lato',sans-serif;font-size:15px;color:#fff;outline:none;transition:border-color .2s;resize:none}
 .fg input::placeholder,.fg textarea::placeholder{color:rgba(255,255,255,.28)}
 .fg input:focus,.fg select:focus,.fg textarea:focus{border-color:rgba(67,201,112,.5)}
+.fg-error input,.fg-error select,.fg-error textarea{border-color:#ff5b5b !important;background:rgba(255,91,91,.05)}
 .fg select option{background:#111}
 .fbottom{margin-top:14px;display:flex;flex-direction:column;gap:12px}
 .bsub{width:100%;padding:17px;background:linear-gradient(135deg,var(--gl),var(--g));color:#000;font-family:'Lato',sans-serif;font-weight:900;font-size:15px;letter-spacing:.07em;text-transform:uppercase;border:none;border-radius:13px;cursor:pointer;box-shadow:0 0 32px rgba(67,201,112,.22);transition:transform .2s,box-shadow .2s}
@@ -187,24 +204,47 @@ a{text-decoration:none;color:inherit}ul{list-style:none}img{display:block;max-wi
 .footer-r{font-size:12px;color:rgba(255,255,255,.32);text-align:right}
 /* RESPONSIVE */
 @media(max-width:1024px){
+  .hero{min-height:auto;padding:48px 0 64px}
   .hero-in,.role-in,.earn-ci,.who-in,.why-in,.apply-in{grid-template-columns:1fr}
   .hcard-w{display:none}
   .feats{grid-template-columns:1fr}
   .ccards{grid-template-columns:1fr 1fr}
   .wcard{position:static}
+  .hl .logo{margin-bottom:24px}
+  .hl .logo img{height:36px}
+  .pill{margin-bottom:18px}
+  .h1{margin-bottom:18px}
+  .hsub{margin-bottom:24px}
+  .hbadges{margin-bottom:24px}
 }
 @media(max-width:640px){
   .wrap{padding:0 20px}.sec{padding:60px 0}
+  .hero{padding:36px 0 56px}
   .hbadges,.ccards,.fgrid{grid-template-columns:1fr}
   .footer{flex-direction:column;gap:14px;text-align:center}
   .footer-r{text-align:center}
   .earn-card{padding:26px 18px}
   .hctas{flex-direction:column}
+  .h1{font-size:clamp(40px,11vw,56px)}
 }
 svg{display:inline-block}
 </style>
 </head>
 <body>
+
+<!-- DELTA CO-BRAND BAR -->
+<div class="brand-bar">
+  <div class="wrap brand-bar-in">
+    <div class="brand-side">
+      <img src="https://deltaconstructionpartners.com/wp-content/uploads/2022/12/delta-logo.png" alt="Delta Construction Partners" class="brand-delta">
+    </div>
+    <div class="brand-pipe"></div>
+    <div class="brand-side">
+      <div class="brand-eyebrow">Now Casting</div>
+      <div class="brand-ecrn">ECRN Tampa Bay</div>
+    </div>
+  </div>
+</div>
 
 <div id="splash">
   <img src="https://deltaconstructionpartners.com/wp-content/uploads/2026/03/ECRN-Horizontal-Logo-White.png" alt="ECRN">
@@ -222,149 +262,52 @@ svg{display:inline-block}
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m12 3-1.9 4.6L5.5 9.5l4.6 1.9L12 16l1.9-4.6L18.5 9.5l-4.6-1.9z"/><path d="M5 21v-4M3 19h4M19 17v-4M17 15h4"/></svg>
           Tampa Bay Creator Casting Call
         </div>
-        <h1 class="h1 reveal" style="transition-delay:.14s">Become the <span class="ac">Face</span> of ECRN</h1>
-        <p class="hsub reveal" style="transition-delay:.2s">ECRN is looking for a bold local creator to help launch a new referral network brand through Reels, TikToks, Shorts, interviews, and social-first storytelling.</p>
+        <h1 class="h1 reveal" style="transition-delay:.14s">Get <span class="ac">Paid</span> To Create In Tampa Bay</h1>
+        <p class="hsub reveal" style="transition-delay:.2s">ECRN — an initiative of <strong>Delta Construction Partners</strong> — is looking for a bold local creator to launch a new referral network brand through Reels, TikToks, Shorts, interviews, and social-first storytelling.</p>
         <div class="hbadges reveal" style="transition-delay:.24s">
           <div class="hbc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M20 10c0 7-8 13-8 13S4 17 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg><div class="hbc-t">Tampa Bay</div><div class="hbc-s">Local preferred</div></div>
           <div class="hbc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg><div class="hbc-t">On Camera</div><div class="hbc-s">Strong presence</div></div>
-          <div class="hbc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg><div class="hbc-t">High Upside</div><div class="hbc-s">Long-term role</div></div>
+          <div class="hbc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg><div class="hbc-t" style="color:var(--g)">$250K+</div><div class="hbc-s">Earning potential</div></div>
         </div>
         <div class="hctas reveal" style="transition-delay:.28s">
-          <a href="#apply" class="btn-p">Apply to Be Considered <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="17" height="17"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-          <a href="#role" class="btn-o">See the Role</a>
+          <a href="#apply" class="btn-p">Apply Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="17" height="17"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+          <a href="#comp" class="btn-o">See the Pay</a>
         </div>
         <p class="hnote reveal" style="transition-delay:.32s">Female creators and bilingual English/Spanish creators are strongly encouraged to apply.</p>
       </div>
       <div class="hcard-w reveal" style="transition-delay:.2s">
         <div class="hcard-glow"></div>
-        <div class="hcard"><div class="hcard-in">
-          <div class="hci-glow"></div><div class="hci-line"></div><div class="hci-sq"></div>
-          <div class="hci-phone"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
-          <div class="hci-cnt">
-            <div class="hci-lbl">Creator Role</div>
-            <div class="hci-ttl">Not a normal social media job.</div>
-            <p class="hci-bd">Content in the office, in the field, on camera, and with real people. Built for someone with personality, confidence, and consistency.</p>
+        <div class="dcard">
+          <div class="dcard-glow"></div>
+          <div class="dcard-verified">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+            Verified Opportunity
           </div>
-          <div class="mstats">
-            <div class="ms"><div class="ms-l">Potential</div><div class="ms-v">6-Figure</div></div>
-            <div class="ms"><div class="ms-l">Role Type</div><div class="ms-v">Long-Term</div></div>
-            <div class="ms"><div class="ms-l">Content</div><div class="ms-v">Short-Form</div></div>
-            <div class="ms"><div class="ms-l">Location</div><div class="ms-v">Tampa Bay</div></div>
+          <div class="dcard-eyebrow">Brought To You By</div>
+          <img src="https://deltaconstructionpartners.com/wp-content/uploads/2022/12/delta-logo.png" alt="Delta Construction Partners" class="dcard-logo">
+          <div class="dcard-tagline">National Recruiting Firm  ·  Electrical Construction</div>
+          <p class="dcard-body"><strong>Since 2008</strong>, Delta Construction Partners has placed leaders, engineers, and electricians at the country's top firms. ECRN is our next chapter — and we're casting the creator who'll be its voice.</p>
+          <div class="dcard-comp">
+            <div class="dc-row">
+              <span class="dc-lbl">Base Salary</span>
+              <span class="dc-val">$50,000</span>
+            </div>
+            <div class="dc-row">
+              <span class="dc-lbl">+ Commission</span>
+              <span class="dc-val">Every placement</span>
+            </div>
+            <div class="dc-row dc-row-total">
+              <span class="dc-lbl">Total potential</span>
+              <span class="dc-val dc-val-big">$250,000+ / yr</span>
+            </div>
           </div>
-        </div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ROLE -->
-<section class="role-sec sec" id="role">
-  <div class="wrap">
-    <div class="role-in">
-      <div class="role-l reveal">
-        <div class="eyebrow">The Opportunity</div>
-        <h2>A creator role with real upside.</h2>
-        <p>This is for someone who wants more than random freelance gigs. You'll help shape the public voice of ECRN and become the recognizable personality behind the brand.</p>
-        <a href="#apply" class="btn-p">Apply to Be Considered <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="17" height="17"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-      </div>
-      <div class="feats">
-        <div class="feat reveal" style="transition-delay:.05s"><div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><h3>High Earning Potential</h3><p>Long-term creator opportunity with performance upside and room to grow with the brand.</p></div>
-        <div class="feat reveal" style="transition-delay:.1s"><div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg></div><h3>Public-Facing Role</h3><p>You are not just posting content. You are becoming the face, voice, and personality people connect with.</p></div>
-        <div class="feat reveal" style="transition-delay:.15s"><div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/><rect x="2" y="6" width="20" height="14" rx="2"/></svg></div><h3>Long-Term Position</h3><p>Designed for someone who wants to build with ECRN, not just complete one-off content jobs.</p></div>
-        <div class="feat reveal" style="transition-delay:.2s"><div class="feat-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><h3>Brand Visibility</h3><p>Your content can help bring the ECRN story to life across Tampa Bay and beyond.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- EARN -->
-<section class="earn-sec sec">
-  <div class="ebg"></div><div class="ebg2"></div>
-  <div class="wrap" style="position:relative;z-index:2">
-    <div class="earn-h reveal">
-      <div class="eyebrow">How You Earn</div>
-      <h2>Every referral is real money.</h2>
-      <p>ECRN pays commission on every job placement through the referral network. As the face of the brand, your content drives those referrals — and that means real upside on every win you help bring in.</p>
-    </div>
-    <div class="earn-card reveal" style="transition-delay:.1s">
-      <div class="earn-ci">
-        <div>
-          <div class="per-lbl">Per Job Placement</div>
-          <div class="earn-num">$3K<span class="sep">–</span>$10K</div>
-          <p class="earn-note">Every successful placement through the ECRN referral network pays out $3,000–$10,000 in commission depending on the role.</p>
-        </div>
-        <div class="erows">
-          <div class="erow"><div class="er-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><div><div class="er-t">You drive the reach</div><p class="er-b">Your Reels, TikToks, Shorts, and interviews get the referral network in front of people.</p></div></div>
-          <div class="erow"><div class="er-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="5"/><path d="M20 21a8 8 0 0 0-16 0"/></svg></div><div><div class="er-t">Referrals come in</div><p class="er-b">When people get placed because of your content, that's a win on the board.</p></div></div>
-          <div class="erow"><div class="er-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div><div><div class="er-t">You earn on the back end</div><p class="er-b">You have the chance to earn commission on the referrals your content generates. More traction, bigger upside.</p></div></div>
         </div>
       </div>
     </div>
-    <div class="earn-ft">
-      <p>This is a creator role with creator economics. Commission structure is discussed during the interview process.</p>
-      <a href="#apply" class="btn-p">Apply to Be Considered <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="17" height="17"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-    </div>
   </div>
 </section>
 
-<!-- CONTENT -->
-<section class="cont-sec sec">
-  <div class="wrap">
-    <div class="reveal"><div class="eyebrow">What You'll Create</div><h2>Content people actually want to watch.</h2></div>
-    <div class="ccards">
-      <div class="ccard reveal" style="transition-delay:.05s"><div class="ccard-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></div><div><div class="ccard-t">Reels & TikToks</div><p class="ccard-b">Short-form videos built for attention, retention, and social discovery.</p></div></div>
-      <div class="ccard reveal" style="transition-delay:.1s"><div class="ccard-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="2" width="6" height="12" rx="3"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/></svg></div><div><div class="ccard-t">Interviews</div><p class="ccard-b">Talk to workers, referral partners, placements, recruiters, and people in the field.</p></div></div>
-      <div class="ccard reveal" style="transition-delay:.15s"><div class="ccard-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></div><div><div class="ccard-t">Brand Stories</div><p class="ccard-b">Bring ECRN's mission, success stories, and referral network to life.</p></div></div>
-      <div class="ccard reveal" style="transition-delay:.2s"><div class="ccard-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div><div><div class="ccard-t">Direct Response</div><p class="ccard-b">Create videos that explain the opportunity and drive people to take action.</p></div></div>
-    </div>
-    <div class="ccta reveal" style="transition-delay:.25s"><a href="#apply" class="btn-p">Apply to Be Considered <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="17" height="17"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
-  </div>
-</section>
 
-<!-- WHO -->
-<section class="who-sec sec">
-  <div class="wrap">
-    <div class="who-in">
-      <div class="wcard reveal">
-        <div class="eyebrow">Who We Want</div>
-        <h2>Bold. Social. Strong on camera.</h2>
-        <p>The right person has natural presence, social instincts, and the confidence to speak to real people on camera without sounding scripted or corporate.</p>
-        <a href="#apply" class="btn-p">Apply to Be Considered <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="17" height="17"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-      </div>
-      <div class="wlist reveal" style="transition-delay:.1s">
-        <div class="witem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Local to Tampa Bay</span></div>
-        <div class="witem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Strong, natural on-camera presence</span></div>
-        <div class="witem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>High-energy personality</span></div>
-        <div class="witem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Comfortable creating Reels, TikToks, and Shorts</span></div>
-        <div class="witem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Comfortable interviewing people</span></div>
-        <div class="witem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Able to create consistently</span></div>
-        <div class="witem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Can edit short-form videos, or willing to learn</span></div>
-        <div class="witem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Bilingual English/Spanish preferred</span></div>
-        <div class="witem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Female creators strongly encouraged to apply</span></div>
-        <div class="witem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Not looking for a boring desk-only role</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY -->
-<section class="why-sec sec">
-  <div class="wrap">
-    <div class="why-in">
-      <div class="why-l reveal">
-        <div class="eyebrow">Why ECRN</div>
-        <h2>Help launch the brand from the ground up.</h2>
-        <p>ECRN is a referral network being launched under Delta Construction Partners. The creator behind the brand will help make the opportunity feel human, exciting, trusted, and easy to understand.</p>
-        <a href="#apply" class="btn-p">Apply to Be Considered <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="17" height="17"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
-      </div>
-      <div class="litems reveal" style="transition-delay:.1s">
-        <div class="litem"><div class="li-n">01</div><div><div class="li-t">You help shape the voice</div><p class="li-b">This is not a stale brand with a fixed personality. You'll help define how ECRN shows up socially.</p></div></div>
-        <div class="litem"><div class="li-n">02</div><div><div class="li-t">You become recognizable</div><p class="li-b">The goal is to make you the creator people associate with the brand.</p></div></div>
-        <div class="litem"><div class="li-n">03</div><div><div class="li-t">You create content with purpose</div><p class="li-b">The content is built around real referrals, real people, real placements, and real opportunity.</p></div></div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- APPLY -->
 <section class="apply-sec sec" id="apply">
@@ -372,42 +315,114 @@ svg{display:inline-block}
     <div class="apply-in">
       <div class="apply-l reveal">
         <div class="eyebrow">Apply Now</div>
-        <h2>Think you could be the face of ECRN?</h2>
+        <h2>Apply to be ECRN's creator.</h2>
         <p>Drop your info and social links. We'll review your content and personality from there. If you're a fit, we'll reach out to set up a quick chat.</p>
         <div class="anote"><strong>Takes under a minute.</strong><p>No video uploads, no hoops. Just share your handles so we can see your vibe and camera presence in action.</p></div>
+        <div class="gate-box">
+          <div class="gate-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" width="22" height="22"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <div class="gate-text">
+            <strong>Have questions now?</strong>
+            <span>Call or text our direct line — <em>revealed after you submit the form below.</em></span>
+          </div>
+        </div>
       </div>
       <div class="aform reveal" style="transition-delay:.1s">
+        <div class="form-note-bar"><span class="fnb-req">★ Required</span><span class="fnb-opt">Quick — under a minute</span></div>
         <div class="fgrid">
-          <div class="fg"><label>Full Name</label><input type="text" placeholder="Jane Creator"></div>
-          <div class="fg"><label>Phone</label><input type="tel" placeholder="(555) 555-5555"></div>
-          <div class="fg"><label>Email</label><input type="email" placeholder="you@email.com"></div>
-          <div class="fg"><label>City / Area</label><input type="text" placeholder="Tampa, St. Pete, Clearwater..."></div>
-          <div class="fg"><label>Instagram Link</label><input type="url" placeholder="https://instagram.com/..."></div>
-          <div class="fg"><label>TikTok Link</label><input type="url" placeholder="https://tiktok.com/@..."></div>
-          <div class="fg"><label>Are you bilingual?</label><select><option>Select one</option><option>Yes</option><option>No</option><option>Somewhat</option></select></div>
-          <div class="fg"><label>Can you edit videos?</label><select><option>Select one</option><option>Yes</option><option>No</option><option>Basic edits</option></select></div>
-          <div class="fg full"><label>Familiarity with ad content for businesses?</label><select><option>Select one</option><option>Very familiar — I've made ads before</option><option>Somewhat familiar</option><option>A little — I've seen examples</option><option>Not familiar yet, but eager to learn</option></select></div>
-          <div class="fg full"><label>Why would you be a strong fit for ECRN?</label><textarea rows="5" placeholder="Tell us about your personality, camera presence, content experience, and why this role interests you."></textarea></div>
+          <div class="fg"><label>Full Name <span class="req">★</span></label><input type="text" placeholder="Jane Creator" data-required="1" data-field="name"></div>
+          <div class="fg"><label>Phone <span class="req">★</span></label><input type="tel" placeholder="(555) 555-5555" data-required="1" data-field="phone"></div>
+          <div class="fg"><label>Email <span class="req">★</span></label><input type="email" placeholder="you@email.com" data-required="1" data-field="email"></div>
+          <div class="fg"><label>Instagram Handle <span class="req">★</span></label><input type="text" placeholder="@yourhandle" data-required="1" data-field="instagram"></div>
         </div>
+
+        <details class="more-info">
+          <summary>
+            <span class="mi-title">Additional Information</span>
+            <span class="mi-sub">Suggested but not required — helps us understand your fit faster</span>
+            <span class="mi-chev"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16"><polyline points="6 9 12 15 18 9"/></svg></span>
+          </summary>
+          <div class="fgrid mi-grid">
+            <div class="fg"><label>TikTok Handle</label><input type="text" placeholder="@yourhandle" data-field="tiktok"></div>
+            <div class="fg"><label>City / Area</label><input type="text" placeholder="Tampa, St. Pete, Clearwater..." data-field="city"></div>
+            <div class="fg"><label>Are you bilingual?</label><select data-field="bilingual"><option value="">Select one</option><option>Yes</option><option>No</option><option>Somewhat</option></select></div>
+            <div class="fg"><label>Can you edit videos?</label><select data-field="canEdit"><option value="">Select one</option><option>Yes</option><option>No</option><option>Basic edits</option></select></div>
+            <div class="fg full"><label>Familiarity with ad content for businesses?</label><select data-field="adFamiliarity"><option value="">Select one</option><option>Very familiar — I've made ads before</option><option>Somewhat familiar</option><option>A little — I've seen examples</option><option>Not familiar yet, but eager to learn</option></select></div>
+            <div class="fg full"><label>Why would you be a strong fit for ECRN?</label><textarea rows="5" placeholder="Tell us about your personality, camera presence, content experience, and why this role interests you." data-field="whyFit"></textarea></div>
+          </div>
+        </details>
+
         <div class="fbottom">
           <button class="bsub" type="button">Submit Application</button>
-          <p class="fdis">Connect this form to your CRM, GHL, or form tool before launch.</p>
+          <p class="fdis">We'll review your profile and reach out if you're a strong fit.</p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
+<!-- COMP -->
+<section class="comp-sec sec" id="comp">
+  <div class="comp-bg"></div>
+  <div class="wrap" style="position:relative;z-index:2">
+    <div class="comp-head reveal">
+      <div class="eyebrow">The Compensation</div>
+      <h2>$50k base. Real commission. Real bonuses.</h2>
+      <p>This isn't a gig — it's a full-time creator role with serious financial upside.</p>
+    </div>
+    <div class="comp-grid reveal" style="transition-delay:.1s">
+      <div class="comp-stat">
+        <div class="comp-num">$50K</div>
+        <div class="comp-lbl">Base salary</div>
+      </div>
+      <div class="comp-plus">+</div>
+      <div class="comp-stat">
+        <div class="comp-num">Commission</div>
+        <div class="comp-lbl">On every placement</div>
+      </div>
+      <div class="comp-plus">+</div>
+      <div class="comp-stat">
+        <div class="comp-num">Bonuses</div>
+        <div class="comp-lbl">Performance-based</div>
+      </div>
+    </div>
+    <div class="comp-total reveal" style="transition-delay:.2s">
+      <div class="comp-total-lbl">Total earning potential</div>
+      <div class="comp-total-num">$250,000+ / year</div>
+    </div>
+    <div class="comp-cta reveal" style="transition-delay:.25s">
+      <a href="#apply" class="btn-p">Apply Now <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="17" height="17"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<!-- WHO -->
+<section class="who-sec sec">
+  <div class="wrap">
+    <div class="who-tight reveal">
+      <div class="eyebrow" style="text-align:center;display:block;margin-bottom:14px">Who We Want</div>
+      <h2 style="text-align:center;font-weight:900;font-size:clamp(28px,3.6vw,42px);line-height:1.1;letter-spacing:-.02em;margin-bottom:32px">Bold. Social. Strong on camera.</h2>
+      <div class="wlist-tight">
+        <div class="witem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Local to Tampa Bay</span></div>
+        <div class="witem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Strong on-camera presence</span></div>
+        <div class="witem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Comfortable with Reels &amp; TikToks</span></div>
+        <div class="witem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg><span>Bilingual English/Spanish is a plus</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
 <!-- FAQ -->
 <section class="faq-sec sec">
   <div class="wrap">
     <div class="faq-hd reveal"><div class="eyebrow">FAQ</div><h2>Questions worth asking.</h2></div>
     <div class="faq-list">
-      <div class="faq-it reveal" style="transition-delay:.05s"><h3>Do I need a huge following?</h3><p>No. A large following is a plus, but camera presence, consistency, personality, and content instincts matter more.</p></div>
-      <div class="faq-it reveal" style="transition-delay:.1s"><h3>Is this a normal social media manager job?</h3><p>No. This is a creator and on-camera brand personality role. The focus is creating content, interviewing people, and bringing ECRN to life socially.</p></div>
-      <div class="faq-it reveal" style="transition-delay:.15s"><h3>Do I need construction experience?</h3><p>No. You need to be comfortable learning, asking questions, and creating content around real people and real stories.</p></div>
-      <div class="faq-it reveal" style="transition-delay:.2s"><h3>Is bilingual required?</h3><p>Bilingual English/Spanish is preferred and a strong advantage, but not required.</p></div>
-      <div class="faq-it reveal" style="transition-delay:.25s"><h3>Is this long term?</h3><p>Yes. This is a long-term creator role with real room to grow with ECRN.</p></div>
+      <div class="faq-it reveal" style="transition-delay:.05s"><h3>Do I need a huge following?</h3><p>No. Camera presence, personality, and consistency matter way more than follower count.</p></div>
+      <div class="faq-it reveal" style="transition-delay:.1s"><h3>Do I need construction experience?</h3><p>No. You just need to be comfortable on camera and willing to learn the space. We'll handle the rest.</p></div>
+      <div class="faq-it reveal" style="transition-delay:.15s"><h3>Is this long term?</h3><p>Yes — this is a long-term, full-time role with $50k base, commission, and bonus potential exceeding $250k/year.</p></div>
     </div>
   </div>
 </section>
@@ -417,7 +432,7 @@ svg{display:inline-block}
   <div class="footer">
     <img src="https://deltaconstructionpartners.com/wp-content/uploads/2026/03/ECRN-Horizontal-Logo-White.png" alt="ECRN">
     <div class="footer-r">
-      <div>A Delta Construction Partners Initiative · deltaecrn.com</div>
+      <div>A Delta Construction Partners Initiative · goecrn.com</div>
       <div style="margin-top:4px;color:var(--g);font-weight:700">#BuiltForLeaders</div>
     </div>
   </div>
@@ -439,27 +454,58 @@ document.querySelector('.bsub').addEventListener('click', function() {
   var btn = this;
   var form = document.querySelector('.aform');
 
-  var fullName = form.querySelector('input[type="text"]').value.trim();
+  // Helper to get field value by data-field attribute
+  function get(field) {
+    var el = form.querySelector('[data-field="' + field + '"]');
+    return el ? el.value.trim() : '';
+  }
+
+  // Helper to clear any previous error highlight
+  function clearErrors() {
+    var marked = form.querySelectorAll('.fg-error');
+    for (var i = 0; i < marked.length; i++) marked[i].classList.remove('fg-error');
+  }
+
+  // Convert @handle or handle to a full social URL
+  function toInstagramUrl(input) {
+    if (!input) return '';
+    var clean = input.replace(/^@/, '').replace(/^https?:\/\/(www\.)?instagram\.com\//i, '').replace(/\/$/, '').trim();
+    if (!clean) return '';
+    return 'https://instagram.com/' + clean;
+  }
+  function toTiktokUrl(input) {
+    if (!input) return '';
+    var clean = input.replace(/^@/, '').replace(/^https?:\/\/(www\.)?tiktok\.com\/@?/i, '').replace(/\/$/, '').trim();
+    if (!clean) return '';
+    return 'https://tiktok.com/@' + clean;
+  }
+
+  clearErrors();
+
+  var fullName = get('name');
+  var phone = get('phone');
+  var email = get('email');
+  var instagramHandle = get('instagram');
+
+  // Validate required fields
+  var missing = [];
+  if (!fullName) missing.push('name');
+  if (!phone) missing.push('phone');
+  if (!email) missing.push('email');
+  if (!instagramHandle) missing.push('instagram');
+
+  if (missing.length) {
+    for (var i = 0; i < missing.length; i++) {
+      var el = form.querySelector('[data-field="' + missing[i] + '"]');
+      if (el && el.parentNode) el.parentNode.classList.add('fg-error');
+    }
+    alert('Please fill in: Name, Phone, Email, and Instagram Handle.');
+    return;
+  }
+
   var nameParts = fullName.split(' ');
   var firstName = nameParts[0] || '';
   var lastName = nameParts.slice(1).join(' ') || '';
-  var phone = form.querySelector('input[type="tel"]').value.trim();
-  var email = form.querySelector('input[type="email"]').value.trim();
-  var inputs = form.querySelectorAll('input[type="text"]');
-  var city = inputs[1] ? inputs[1].value.trim() : '';
-  var urlInputs = form.querySelectorAll('input[type="url"]');
-  var instagram = urlInputs[0] ? urlInputs[0].value.trim() : '';
-  var tiktok = urlInputs[1] ? urlInputs[1].value.trim() : '';
-  var selects = form.querySelectorAll('select');
-  var bilingual = selects[0] ? selects[0].value : '';
-  var canEdit = selects[1] ? selects[1].value : '';
-  var adFamiliarity = selects[2] ? selects[2].value : '';
-  var whyFit = form.querySelector('textarea').value.trim();
-
-  if (!firstName || !email || !phone) {
-    alert('Please fill in your name, email, and phone before submitting.');
-    return;
-  }
 
   btn.textContent = 'Submitting...';
   btn.disabled = true;
@@ -470,13 +516,13 @@ document.querySelector('.bsub').addEventListener('click', function() {
     name: fullName,
     phone: phone,
     email: email,
-    city: city,
-    instagram: instagram,
-    tiktok: tiktok,
-    bilingual: bilingual,
-    canEditVideos: canEdit,
-    adFamiliarity: adFamiliarity,
-    whyFit: whyFit,
+    city: get('city'),
+    instagram: toInstagramUrl(instagramHandle),
+    tiktok: toTiktokUrl(get('tiktok')),
+    bilingual: get('bilingual'),
+    canEditVideos: get('canEdit'),
+    adFamiliarity: get('adFamiliarity'),
+    whyFit: get('whyFit'),
     source: 'ECRN Creators Landing Page'
   };
 
@@ -487,10 +533,18 @@ document.querySelector('.bsub').addEventListener('click', function() {
   })
   .then(function() {
     if (typeof fbq === 'function') { fbq('track', 'Lead'); }
-    form.innerHTML = '<div style="text-align:center;padding:60px 20px">'
-      + '<div style="font-size:48px;margin-bottom:16px">✅</div>'
-      + '<div style="font-weight:900;font-size:26px;margin-bottom:12px">Application Received</div>'
-      + '<p style="font-weight:300;font-size:16px;color:rgba(255,255,255,.6);line-height:1.7">Thanks ' + firstName + ' — we\'ll review your profile and reach out if you\'re a fit.</p>'
+    form.innerHTML = '<div style="text-align:center;padding:48px 20px">'
+      + '<div style="font-size:52px;margin-bottom:14px">✅</div>'
+      + '<div style="font-weight:900;font-size:26px;margin-bottom:10px;letter-spacing:-.01em">Application Received</div>'
+      + '<p style="font-weight:300;font-size:16px;color:rgba(255,255,255,.65);line-height:1.65;max-width:380px;margin:0 auto 28px">Thanks ' + firstName + ' — we\'ll review your profile and reach out if you\'re a fit.</p>'
+      + '<div style="margin-top:24px;padding:24px 20px;border:1px solid rgba(67,201,112,.4);background:linear-gradient(135deg,rgba(67,201,112,.14),rgba(67,201,112,.04));border-radius:16px">'
+      + '<div style="font-weight:700;font-size:11px;letter-spacing:.28em;text-transform:uppercase;color:var(--g);margin-bottom:10px">Have Questions? Direct Line:</div>'
+      + '<a href="tel:7276449302" style="display:inline-block;font-weight:900;font-size:clamp(26px,4vw,34px);color:#fff;text-decoration:none;letter-spacing:-.01em;line-height:1.1">727-644-9302</a>'
+      + '<div style="margin-top:14px;display:flex;gap:8px;justify-content:center;flex-wrap:wrap">'
+      + '<a href="tel:7276449302" style="display:inline-flex;align-items:center;gap:6px;background:var(--g);color:#000;font-weight:900;font-size:13px;text-decoration:none;padding:11px 18px;border-radius:10px;letter-spacing:.04em;text-transform:uppercase"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>Call</a>'
+      + '<a href="sms:7276449302" style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.08);color:#fff;font-weight:900;font-size:13px;text-decoration:none;padding:11px 18px;border-radius:10px;letter-spacing:.04em;text-transform:uppercase;border:1px solid rgba(255,255,255,.15)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>Text</a>'
+      + '</div>'
+      + '</div>'
       + '</div>';
   })
   .catch(function() {
