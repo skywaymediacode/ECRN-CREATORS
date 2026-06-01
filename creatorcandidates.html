@@ -532,7 +532,7 @@ select.input{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://ww
 (function(){
   // WEBHOOK URL - this should be a NEW GHL webhook for Stage 2 responses
   // Until set up, falls back to console.log so the form still works for testing
-  const WEBHOOK_URL = 'STAGE2_WEBHOOK_URL_PLACEHOLDER';
+  const WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/7OQ0NuvNtfSL8r6AcNGa/webhook-trigger/8a94911b-0a52-49dc-bc05-a300a19daee5';
 
   const TOTAL_STEPS = 6;
   let currentStep = 1;
@@ -780,7 +780,7 @@ select.input{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://ww
 
     try {
       // Only attempt fetch if webhook URL is set
-      if (WEBHOOK_URL && WEBHOOK_URL !== 'STAGE2_WEBHOOK_URL_PLACEHOLDER') {
+      if (WEBHOOK_URL && WEBHOOK_URL !== 'https://services.leadconnectorhq.com/hooks/7OQ0NuvNtfSL8r6AcNGa/webhook-trigger/8a94911b-0a52-49dc-bc05-a300a19daee5') {
         await fetch(WEBHOOK_URL, {
           method: 'POST',
           headers: {'Content-Type': 'application/json'},
