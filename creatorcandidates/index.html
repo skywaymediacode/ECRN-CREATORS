@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stage 2 Application — ECRN Creator Role</title>
+<meta name="description" content="Stage 2 application for the ECRN Tampa Bay Social Media Content Creator role with Delta Construction Partners.">
+
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1197653738947055');
+fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel Code -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --black:#000;
+  --bg:#000;
+  --bg2:#050a07;
+  --card:rgba(15,28,21,.55);
+  --card2:rgba(20,38,28,.65);
+  --line:rgba(67,201,112,.18);
+  --line-strong:rgba(67,201,112,.4);
+  --g:#43c970;
+  --g-dim:#2d8a4d;
+  --g-dark:#038261;
+  --g-light:#abef9a;
+  --txt:#fff;
+  --txt-mute:rgba(255,255,255,.7);
+  --txt-faint:rgba(255,255,255,.5);
+  --err:#ff6b6b;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);color:var(--txt);font-family:'Lato',system-ui,-apple-system,sans-serif;font-weight:400;line-height:1.5;overflow-x:hidden}
+body{min-height:100vh;background:radial-gradient(ellipse at top,rgba(67,201,112,.05) 0%,var(--bg) 50%) fixed}
+img{max-width:100%;display:block}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+input,textarea,select{font-family:inherit}
+
+/* GRID BACKGROUND */
+.grid-bg{position:fixed;inset:0;pointer-events:none;opacity:.4;
+  background-image:
+    linear-gradient(rgba(67,201,112,.04) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(67,201,112,.04) 1px,transparent 1px);
+  background-size:60px 60px;
+  z-index:0;
+}
+
+/* TOP BRAND BAR */
+.topbar{position:relative;z-index:2;padding:14px 0;border-bottom:1px solid var(--line);background:rgba(0,0,0,.7);backdrop-filter:blur(8px)}
+.topbar-in{max-width:1100px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:center;gap:24px}
+.brand-l{display:flex;align-items:center;gap:14px}
+.brand-l img{height:34px;width:auto;object-fit:contain}
+.brand-pipe{width:1px;height:38px;background:linear-gradient(to bottom,transparent,var(--line-strong),transparent)}
+.brand-r{display:flex;flex-direction:column;align-items:flex-start;line-height:1.1}
+.brand-r .eyebrow{font-size:11px;font-weight:900;letter-spacing:.18em;color:var(--g);text-transform:uppercase;margin-bottom:4px}
+.brand-r .title{font-size:14px;font-weight:900;color:var(--txt);letter-spacing:.04em}
+
+/* MAIN CONTAINER */
+.container{position:relative;z-index:1;max-width:780px;margin:0 auto;padding:40px 24px 80px}
+
+/* INTRO */
+.intro{margin-bottom:36px;text-align:center}
+.intro .badge{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border:1px solid var(--line-strong);border-radius:99px;background:rgba(67,201,112,.08);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--g);margin-bottom:18px}
+.intro h1{font-size:clamp(30px,5vw,42px);font-weight:900;line-height:1.1;letter-spacing:-.02em;margin-bottom:14px}
+.intro p{font-size:16px;color:var(--txt-mute);max-width:560px;margin:0 auto;line-height:1.55}
+
+/* PROGRESS BAR */
+.progress{margin-bottom:32px}
+.progress-track{height:6px;background:rgba(67,201,112,.1);border-radius:99px;overflow:hidden;margin-bottom:10px;border:1px solid var(--line)}
+.progress-fill{height:100%;background:linear-gradient(90deg,var(--g-dark),var(--g));border-radius:99px;width:16.67%;transition:width .4s cubic-bezier(.4,0,.2,1);box-shadow:0 0 10px rgba(67,201,112,.4)}
+.progress-text{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--txt-mute)}
+.progress-text .step-name{font-weight:700;color:var(--g)}
+
+/* FORM */
+form{position:relative}
+.step{display:none;animation:fadeIn .35s ease}
+.step.active{display:block}
+@keyframes fadeIn{
+  from{opacity:0;transform:translateY(8px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+.step-head{margin-bottom:28px}
+.step-head h2{font-size:clamp(22px,3.5vw,28px);font-weight:900;line-height:1.2;letter-spacing:-.01em;margin-bottom:8px}
+.step-head p{font-size:14px;color:var(--txt-mute);line-height:1.5}
+
+/* QUESTION BLOCK */
+.q{margin-bottom:28px}
+.q-label{display:block;font-size:15px;font-weight:700;color:var(--txt);margin-bottom:12px;line-height:1.4}
+.q-label .req{color:var(--g);margin-left:4px}
+.q-help{display:block;font-size:13px;color:var(--txt-faint);margin-top:-6px;margin-bottom:12px;line-height:1.45;font-style:italic}
+
+/* TEXT INPUTS */
+.input,textarea.input,select.input{
+  width:100%;padding:14px 16px;background:var(--card);border:1px solid var(--line);border-radius:12px;
+  color:var(--txt);font-size:15px;line-height:1.4;transition:border-color .2s,background .2s;
+  appearance:none;-webkit-appearance:none;
+}
+.input:focus,textarea.input:focus,select.input:focus{
+  outline:none;border-color:var(--g);background:var(--card2);
+}
+.input::placeholder{color:var(--txt-faint)}
+textarea.input{resize:vertical;min-height:110px;font-family:inherit}
+select.input{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2343c970' stroke-width='2'><polyline points='6 9 12 15 18 9'/></svg>");background-repeat:no-repeat;background-position:right 14px center;background-size:16px;padding-right:42px}
+
+/* INPUT ROW (two columns on desktop) */
+.input-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:560px){.input-row{grid-template-columns:1fr}}
+
+/* YES/NO PILL BUTTONS */
+.yn-group{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.yn-btn{
+  padding:14px 16px;border:1.5px solid var(--line);border-radius:12px;background:var(--card);
+  font-size:15px;font-weight:700;color:var(--txt-mute);text-align:center;cursor:pointer;
+  transition:all .2s;display:flex;align-items:center;justify-content:center;gap:8px;
+}
+.yn-btn:hover{border-color:var(--line-strong);color:var(--txt)}
+.yn-btn.selected{background:rgba(67,201,112,.15);border-color:var(--g);color:var(--g)}
+.yn-btn .check{width:18px;height:18px;border-radius:50%;border:1.5px solid currentColor;display:inline-flex;align-items:center;justify-content:center;opacity:.5}
+.yn-btn.selected .check{opacity:1;background:var(--g);border-color:var(--g);color:#000}
+.yn-btn.selected .check svg{display:block}
+.yn-btn .check svg{display:none;width:12px;height:12px}
+
+/* SCALE BUTTONS (1-5) */
+.scale-group{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.scale-btn{
+  padding:14px 4px;border:1.5px solid var(--line);border-radius:10px;background:var(--card);
+  font-size:18px;font-weight:900;color:var(--txt-mute);cursor:pointer;
+  transition:all .2s;display:flex;flex-direction:column;align-items:center;gap:4px;
+}
+.scale-btn .scale-num{font-size:20px;line-height:1}
+.scale-btn .scale-label{font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;opacity:.7}
+.scale-btn:hover{border-color:var(--line-strong);color:var(--txt)}
+.scale-btn.selected{background:rgba(67,201,112,.15);border-color:var(--g);color:var(--g)}
+.scale-legend{display:flex;justify-content:space-between;font-size:11px;color:var(--txt-faint);margin-top:8px;letter-spacing:.04em}
+
+/* MULTI-SELECT CHIPS */
+.chip-group{display:flex;flex-wrap:wrap;gap:8px}
+.chip{
+  padding:10px 16px;border:1.5px solid var(--line);border-radius:99px;background:var(--card);
+  font-size:14px;font-weight:700;color:var(--txt-mute);cursor:pointer;
+  transition:all .2s;display:inline-flex;align-items:center;gap:6px;
+}
+.chip:hover{border-color:var(--line-strong);color:var(--txt)}
+.chip.selected{background:rgba(67,201,112,.18);border-color:var(--g);color:var(--g)}
+.chip.selected::before{content:'✓';font-weight:900}
+
+/* CONDITIONAL BLOCK (shown when Yes is selected) */
+.conditional{display:none;margin-top:14px;padding-top:14px;border-top:1px dashed var(--line);animation:fadeIn .25s ease}
+.conditional.show{display:block}
+.conditional .q-label{font-size:13px;font-weight:700;color:var(--txt-mute);margin-bottom:8px}
+
+/* NAVIGATION */
+.nav{display:flex;justify-content:space-between;align-items:center;margin-top:40px;padding-top:24px;border-top:1px solid var(--line);gap:12px}
+.btn{
+  padding:14px 24px;border-radius:12px;font-size:15px;font-weight:900;letter-spacing:.04em;text-transform:uppercase;
+  display:inline-flex;align-items:center;gap:8px;transition:all .2s;cursor:pointer;
+}
+.btn-back{background:transparent;border:1.5px solid var(--line);color:var(--txt-mute)}
+.btn-back:hover{border-color:var(--line-strong);color:var(--txt)}
+.btn-back:disabled{opacity:.3;cursor:not-allowed}
+.btn-next,.btn-submit{background:linear-gradient(135deg,var(--g),var(--g-light));color:#000;border:none;flex:1;justify-content:center;max-width:280px;box-shadow:0 4px 20px rgba(67,201,112,.25)}
+.btn-next:hover,.btn-submit:hover{transform:translateY(-1px);box-shadow:0 6px 24px rgba(67,201,112,.35)}
+.btn-submit{display:none}
+.btn-submit.show{display:inline-flex}
+.btn-next.hidden{display:none}
+
+/* ERROR MESSAGE */
+.err-msg{display:none;margin-top:12px;padding:10px 14px;background:rgba(255,107,107,.1);border:1px solid rgba(255,107,107,.3);border-radius:10px;color:var(--err);font-size:13px}
+.err-msg.show{display:block}
+.input.has-error,.yn-group.has-error .yn-btn{border-color:var(--err)}
+
+/* SUCCESS STATE */
+.success{display:none;text-align:center;padding:40px 20px;animation:fadeIn .4s ease}
+.success.show{display:block}
+.success-icon{width:80px;height:80px;margin:0 auto 24px;border-radius:50%;background:linear-gradient(135deg,var(--g),var(--g-light));display:flex;align-items:center;justify-content:center;box-shadow:0 8px 32px rgba(67,201,112,.3)}
+.success-icon svg{width:42px;height:42px;color:#000}
+.success h2{font-size:clamp(28px,4.5vw,38px);font-weight:900;line-height:1.15;letter-spacing:-.01em;margin-bottom:16px}
+.success p{font-size:16px;color:var(--txt-mute);max-width:520px;margin:0 auto 18px;line-height:1.55}
+.success .next-steps{margin-top:32px;padding:24px;background:var(--card);border:1px solid var(--line);border-radius:14px;text-align:left}
+.success .next-steps h3{font-size:14px;font-weight:900;letter-spacing:.12em;text-transform:uppercase;color:var(--g);margin-bottom:12px}
+.success .next-steps p{font-size:14px;color:var(--txt-mute);margin:0;text-align:left}
+
+/* FOOTER */
+.footer{position:relative;z-index:1;border-top:1px solid var(--line);padding:24px;text-align:center;font-size:12px;color:var(--txt-faint);letter-spacing:.04em}
+
+/* SUBMITTING STATE */
+.submitting .btn-submit{opacity:.6;pointer-events:none}
+.spinner{display:inline-block;width:16px;height:16px;border:2px solid rgba(0,0,0,.2);border-top-color:#000;border-radius:50%;animation:spin .8s linear infinite;margin-right:8px}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+@media(max-width:560px){
+  .topbar-in{padding:0 16px;gap:14px}
+  .brand-l img{height:28px}
+  .brand-r .eyebrow{font-size:10px}
+  .brand-r .title{font-size:12px}
+  .container{padding:28px 18px 60px}
+  .intro{margin-bottom:28px}
+  .intro h1{font-size:26px}
+  .intro p{font-size:14px}
+  .step-head{margin-bottom:22px}
+  .scale-group{gap:4px}
+  .scale-btn{padding:12px 2px}
+  .scale-btn .scale-num{font-size:17px}
+  .scale-btn .scale-label{font-size:8px}
+  .nav{flex-direction:column-reverse;gap:10px}
+  .btn-back,.btn-next,.btn-submit{width:100%;max-width:none;flex:none;justify-content:center}
+  .btn{padding:14px 18px;font-size:14px}
+}
+</style>
+</head>
+<body>
+
+<div class="grid-bg"></div>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <div class="brand-l">
+      <img src="https://deltaconstructionpartners.com/wp-content/uploads/2022/12/delta-logo.png" alt="Delta Construction Partners">
+    </div>
+    <div class="brand-pipe"></div>
+    <div class="brand-r">
+      <div class="eyebrow">Stage 2</div>
+      <div class="title">ECRN CREATOR ROLE</div>
+    </div>
+  </div>
+</header>
+
+<main class="container">
+
+  <div class="intro">
+    <div class="badge">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14"><polyline points="20 6 9 17 4 12"/></svg>
+      You're moving forward
+    </div>
+    <h1>Tell us more about you</h1>
+    <p>You've already passed Stage 1. This short questionnaire helps us understand your fit before we set up an interview. Takes 5–8 minutes.</p>
+  </div>
+
+  <div class="progress">
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-text">
+      <span>Step <span class="step-current">1</span> of 6</span>
+      <span class="step-name" id="stepName">About You</span>
+    </div>
+  </div>
+
+  <form id="appForm" autocomplete="on">
+
+    <!-- STEP 1: ABOUT YOU -->
+    <div class="step active" data-step="1" data-name="About You">
+      <div class="step-head">
+        <h2>First, who are you?</h2>
+        <p>So we can match your responses to your original application.</p>
+      </div>
+
+      <div class="q">
+        <div class="input-row">
+          <div>
+            <label class="q-label" for="firstName">First Name <span class="req">*</span></label>
+            <input type="text" id="firstName" class="input" data-field="firstName" data-required="1" placeholder="Jane">
+          </div>
+          <div>
+            <label class="q-label" for="lastName">Last Name <span class="req">*</span></label>
+            <input type="text" id="lastName" class="input" data-field="lastName" data-required="1" placeholder="Creator">
+          </div>
+        </div>
+      </div>
+
+      <div class="q">
+        <label class="q-label" for="email">Email <span class="req">*</span></label>
+        <span class="q-help">Use the same email you used to apply originally.</span>
+        <input type="email" id="email" class="input" data-field="email" data-required="1" placeholder="you@email.com">
+      </div>
+
+      <div class="q">
+        <label class="q-label" for="phone">Phone</label>
+        <input type="tel" id="phone" class="input" data-field="phone" placeholder="(555) 555-5555">
+      </div>
+    </div>
+
+    <!-- STEP 2: LOCATION & AVAILABILITY -->
+    <div class="step" data-step="2" data-name="Location & Availability">
+      <div class="step-head">
+        <h2>Location &amp; availability</h2>
+        <p>This role is Tampa Bay-based with in-person and job site requirements.</p>
+      </div>
+
+      <div class="q">
+        <label class="q-label">Are you currently located in the Tampa Bay area? <span class="req">*</span></label>
+        <div class="yn-group" data-field="locatedTampaBay" data-required="1">
+          <button type="button" class="yn-btn" data-val="Yes"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Yes</button>
+          <button type="button" class="yn-btn" data-val="No"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>No</button>
+        </div>
+      </div>
+
+      <div class="q">
+        <label class="q-label">Are you able to work in-office several days per week? <span class="req">*</span></label>
+        <div class="yn-group" data-field="canWorkInOffice" data-required="1">
+          <button type="button" class="yn-btn" data-val="Yes"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Yes</button>
+          <button type="button" class="yn-btn" data-val="No"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>No</button>
+        </div>
+      </div>
+
+      <div class="q">
+        <label class="q-label">Are you able and willing to travel to job sites around Tampa Bay when needed? <span class="req">*</span></label>
+        <div class="yn-group" data-field="canTravelJobSites" data-required="1">
+          <button type="button" class="yn-btn" data-val="Yes"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Yes</button>
+          <button type="button" class="yn-btn" data-val="No"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>No</button>
+        </div>
+      </div>
+
+      <div class="q">
+        <label class="q-label">What are you looking for? <span class="req">*</span></label>
+        <span class="q-help">Select all that apply.</span>
+        <div class="chip-group" data-field="employmentType" data-multi="1" data-required="1">
+          <button type="button" class="chip" data-val="Part-time">Part-time</button>
+          <button type="button" class="chip" data-val="Full-time">Full-time</button>
+          <button type="button" class="chip" data-val="Contract">Contract</button>
+          <button type="button" class="chip" data-val="Long-term">Long-term</button>
+        </div>
+      </div>
+
+      <div class="q">
+        <label class="q-label" for="availableStart">When would you be available to start? <span class="req">*</span></label>
+        <input type="text" id="availableStart" class="input" data-field="availableStartDate" data-required="1" placeholder="e.g., Immediately, 2 weeks notice, May 1st">
+      </div>
+    </div>
+
+    <!-- STEP 3: ON-CAMERA COMFORT -->
+    <div class="step" data-step="3" data-name="On-Camera Comfort">
+      <div class="step-head">
+        <h2>On-camera &amp; brand readiness</h2>
+        <p>This role is public-facing. Being on camera is core to the job.</p>
+      </div>
+
+      <div class="q">
+        <label class="q-label">Are you comfortable being on camera and potentially becoming one of the public faces of ECRN and Delta Construction? <span class="req">*</span></label>
+        <div class="yn-group" data-field="comfortableOnCamera" data-required="1">
+          <button type="button" class="yn-btn" data-val="Yes"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Yes</button>
+          <button type="button" class="yn-btn" data-val="No"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>No</button>
+        </div>
+      </div>
+
+      <div class="q">
+        <label class="q-label">How comfortable are you interviewing people on camera? <span class="req">*</span></label>
+        <span class="q-help">Includes business owners, employees, contractors, and people on job sites.</span>
+        <div class="scale-group" data-field="interviewComfort" data-required="1">
+          <button type="button" class="scale-btn" data-val="1"><span class="scale-num">1</span><span class="scale-label">Not at all</span></button>
+          <button type="button" class="scale-btn" data-val="2"><span class="scale-num">2</span><span class="scale-label">Slightly</span></button>
+          <button type="button" class="scale-btn" data-val="3"><span class="scale-num">3</span><span class="scale-label">Neutral</span></button>
+          <button type="button" class="scale-btn" data-val="4"><span class="scale-num">4</span><span class="scale-label">Comfortable</span></button>
+          <button type="button" class="scale-btn" data-val="5"><span class="scale-num">5</span><span class="scale-label">Very</span></button>
+        </div>
+      </div>
+
+      <div class="q">
+        <label class="q-label">Are you comfortable being on construction job sites and capturing content there? <span class="req">*</span></label>
+        <div class="yn-group" data-field="comfortableJobSites" data-required="1">
+          <button type="button" class="yn-btn" data-val="Yes"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Yes</button>
+          <button type="button" class="yn-btn" data-val="No"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>No</button>
+        </div>
+      </div>
+
+      <div class="q">
+        <label class="q-label">Are you comfortable representing a company publicly and maintaining a professional image online and in person? <span class="req">*</span></label>
+        <div class="yn-group" data-field="comfortablePublicBrand" data-required="1">
+          <button type="button" class="yn-btn" data-val="Yes"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Yes</button>
+          <button type="button" class="yn-btn" data-val="No"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>No</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 4: CONTENT EXPERIENCE -->
+    <div class="step" data-step="4" data-name="Content Experience">
+      <div class="step-head">
+        <h2>Your content experience</h2>
+        <p>Help us understand your skill level and what you've created before.</p>
+      </div>
+
+      <div class="q">
+        <label class="q-label">Do you have experience filming short-form content for businesses, brands, social media, UGC, or paid ads? <span class="req">*</span></label>
+        <div class="yn-group" data-field="contentExperience" data-required="1" data-conditional="contentExperienceDetail">
+          <button type="button" class="yn-btn" data-val="Yes"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Yes</button>
+          <button type="button" class="yn-btn" data-val="No"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>No</button>
+        </div>
+        <div class="conditional" id="cond-contentExperienceDetail">
+          <label class="q-label" for="contentExperienceDetail">Briefly describe your experience:</label>
+          <textarea id="contentExperienceDetail" class="input" data-field="contentExperienceDetail" placeholder="Brands you've worked with, types of content, results..."></textarea>
+        </div>
+      </div>
+
+      <div class="q">
+        <label class="q-label">What platforms have you created content for? <span class="req">*</span></label>
+        <span class="q-help">Select all that apply.</span>
+        <div class="chip-group" data-field="platforms" data-multi="1" data-required="1">
+          <button type="button" class="chip" data-val="Instagram">Instagram</button>
+          <button type="button" class="chip" data-val="TikTok">TikTok</button>
+          <button type="button" class="chip" data-val="YouTube Shorts">YouTube Shorts</button>
+          <button type="button" class="chip" data-val="Facebook">Facebook</button>
+          <button type="button" class="chip" data-val="LinkedIn">LinkedIn</button>
+          <button type="button" class="chip" data-val="Other">Other</button>
+        </div>
+      </div>
+
+      <div class="q">
+        <label class="q-label">Do you have experience editing videos? <span class="req">*</span></label>
+        <div class="yn-group" data-field="videoEditing" data-required="1" data-conditional="editingSoftware">
+          <button type="button" class="yn-btn" data-val="Yes"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Yes</button>
+          <button type="button" class="yn-btn" data-val="No"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>No</button>
+        </div>
+        <div class="conditional" id="cond-editingSoftware">
+          <label class="q-label" for="editingSoftware">What editing software or apps do you use?</label>
+          <input type="text" id="editingSoftware" class="input" data-field="editingSoftware" placeholder="e.g., CapCut, Premiere Pro, DaVinci, Final Cut">
+        </div>
+      </div>
+
+      <div class="q">
+        <label class="q-label">Do you have experience creating content specifically for business growth, lead generation, recruiting, or advertising? <span class="req">*</span></label>
+        <div class="yn-group" data-field="businessContentExp" data-required="1" data-conditional="businessContentDetail">
+          <button type="button" class="yn-btn" data-val="Yes"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Yes</button>
+          <button type="button" class="yn-btn" data-val="No"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>No</button>
+        </div>
+        <div class="conditional" id="cond-businessContentDetail">
+          <label class="q-label" for="businessContentDetail">Tell us more:</label>
+          <textarea id="businessContentDetail" class="input" data-field="businessContentDetail" placeholder="Industries, results, types of campaigns..."></textarea>
+        </div>
+      </div>
+
+      <div class="q">
+        <label class="q-label">Are you familiar with AI tools for content creation, scripting, editing, research, or workflow automation? <span class="req">*</span></label>
+        <div class="yn-group" data-field="aiToolsExp" data-required="1" data-conditional="aiToolsDetail">
+          <button type="button" class="yn-btn" data-val="Yes"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Yes</button>
+          <button type="button" class="yn-btn" data-val="No"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>No</button>
+        </div>
+        <div class="conditional" id="cond-aiToolsDetail">
+          <label class="q-label" for="aiToolsDetail">Which tools have you used?</label>
+          <input type="text" id="aiToolsDetail" class="input" data-field="aiToolsDetail" placeholder="e.g., ChatGPT, Claude, Midjourney, Descript, Runway">
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 5: PORTFOLIO & BACKGROUND -->
+    <div class="step" data-step="5" data-name="Portfolio &amp; Background">
+      <div class="step-head">
+        <h2>Portfolio &amp; background</h2>
+        <p>Show us your work and share anything we should know.</p>
+      </div>
+
+      <div class="q">
+        <label class="q-label" for="portfolioLinks">Portfolio links <span class="req">*</span></label>
+        <span class="q-help">Paste any links to social pages, videos, reels, or content you've made. One per line is fine.</span>
+        <textarea id="portfolioLinks" class="input" data-field="portfolioLinks" data-required="1" placeholder="https://instagram.com/yourhandle&#10;https://tiktok.com/@yourhandle&#10;https://youtube.com/@yourchannel" style="min-height:140px"></textarea>
+      </div>
+
+      <div class="q">
+        <label class="q-label" for="brandConcerns">Anything in your public social media, professional history, or personal background that could create a concern for a public-facing brand role?</label>
+        <span class="q-help">Answering this does NOT automatically disqualify you. We ask because this role represents the brand publicly. Be honest.</span>
+        <textarea id="brandConcerns" class="input" data-field="brandConcerns" placeholder="Nothing? Just type 'No.' If something — share what you'd want us to know."></textarea>
+      </div>
+
+      <div class="q">
+        <label class="q-label">If selected to move forward, would you complete a standard background check? <span class="req">*</span></label>
+        <div class="yn-group" data-field="willingBackgroundCheck" data-required="1">
+          <button type="button" class="yn-btn" data-val="Yes"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>Yes</button>
+          <button type="button" class="yn-btn" data-val="No"><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg></span>No</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- STEP 6: MOTIVATION & COMPENSATION -->
+    <div class="step" data-step="6" data-name="Motivation &amp; Fit">
+      <div class="step-head">
+        <h2>Last few — let's hear from you</h2>
+        <p>The why and the what-it-takes.</p>
+      </div>
+
+      <div class="q">
+        <label class="q-label" for="whatInterests">What interests you most about this opportunity? <span class="req">*</span></label>
+        <textarea id="whatInterests" class="input" data-field="whatInterests" data-required="1" placeholder="Be real. What about this role excites you?" style="min-height:130px"></textarea>
+      </div>
+
+      <div class="q">
+        <label class="q-label" for="incomeExpectations">What are your current income goals or expectations for a role like this? <span class="req">*</span></label>
+        <span class="q-help">An honest number helps us know if we're aligned. Base salary + commission expectations both welcome.</span>
+        <input type="text" id="incomeExpectations" class="input" data-field="incomeExpectations" data-required="1" placeholder="e.g., $60K base + commission, or $80K total">
+      </div>
+    </div>
+
+    <div class="err-msg" id="errMsg">Please answer the required questions before continuing.</div>
+
+    <div class="nav">
+      <button type="button" class="btn btn-back" id="btnBack" disabled>← Back</button>
+      <button type="button" class="btn btn-next" id="btnNext">Continue →</button>
+      <button type="button" class="btn btn-submit" id="btnSubmit">Submit Application</button>
+    </div>
+  </form>
+
+  <div class="success" id="successState">
+    <div class="success-icon">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+    </div>
+    <h2>Got it. We'll be in touch.</h2>
+    <p id="successMsg">Thanks for taking the time. Our team is reviewing Stage 2 responses now and we'll reach out within 5–7 business days if it looks like a strong fit.</p>
+    <div class="next-steps">
+      <h3>What happens next</h3>
+      <p>If you're a strong match, you'll get an email from our team to schedule a short intro call. From there, finalists meet with Delta Construction Partners leadership. If you don't hear back, it means we're moving forward with other candidates for this round — but we may keep your info on file for future opportunities.</p>
+    </div>
+  </div>
+
+</main>
+
+<footer class="footer">
+  ECRN · A Delta Construction Partners Initiative · goecrn.com
+</footer>
+
+<script>
+(function(){
+  // WEBHOOK URL - this should be a NEW GHL webhook for Stage 2 responses
+  // Until set up, falls back to console.log so the form still works for testing
+  const WEBHOOK_URL = 'STAGE2_WEBHOOK_URL_PLACEHOLDER';
+
+  const TOTAL_STEPS = 6;
+  let currentStep = 1;
+  const state = {};
+
+  // Pre-fill from URL params if provided
+  const urlParams = new URLSearchParams(window.location.search);
+  const prefillMap = {
+    email: 'email',
+    name: 'firstName',
+    firstName: 'firstName',
+    firstname: 'firstName',
+    first_name: 'firstName',
+    lastName: 'lastName',
+    lastname: 'lastName',
+    last_name: 'lastName',
+    phone: 'phone'
+  };
+  urlParams.forEach((val, key) => {
+    const targetId = prefillMap[key];
+    if (targetId) {
+      const el = document.getElementById(targetId);
+      if (el && val) el.value = decodeURIComponent(val);
+    }
+  });
+  // Handle "name" param specially - try to split into first/last
+  if (urlParams.get('name') && !urlParams.get('firstName') && !urlParams.get('lastName')) {
+    const parts = decodeURIComponent(urlParams.get('name')).trim().split(/\s+/);
+    if (parts.length > 0) document.getElementById('firstName').value = parts[0];
+    if (parts.length > 1) document.getElementById('lastName').value = parts.slice(1).join(' ');
+  }
+
+  // Yes/No button handling
+  document.querySelectorAll('.yn-group').forEach(group => {
+    group.querySelectorAll('.yn-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        group.querySelectorAll('.yn-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        group.classList.remove('has-error');
+        group.dataset.value = btn.dataset.val;
+        // Handle conditional reveals
+        const condField = group.dataset.conditional;
+        if (condField) {
+          const condEl = document.getElementById('cond-' + condField);
+          if (condEl) {
+            if (btn.dataset.val === 'Yes') condEl.classList.add('show');
+            else condEl.classList.remove('show');
+          }
+        }
+      });
+    });
+  });
+
+  // Scale button handling
+  document.querySelectorAll('.scale-group').forEach(group => {
+    group.querySelectorAll('.scale-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        group.querySelectorAll('.scale-btn').forEach(b => b.classList.remove('selected'));
+        btn.classList.add('selected');
+        group.classList.remove('has-error');
+        group.dataset.value = btn.dataset.val;
+      });
+    });
+  });
+
+  // Chip multi-select handling
+  document.querySelectorAll('.chip-group').forEach(group => {
+    group.querySelectorAll('.chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        chip.classList.toggle('selected');
+        group.classList.remove('has-error');
+        const vals = Array.from(group.querySelectorAll('.chip.selected')).map(c => c.dataset.val);
+        group.dataset.value = vals.join(', ');
+      });
+    });
+  });
+
+  // Validate current step
+  function validateStep(stepNum) {
+    const step = document.querySelector('.step[data-step="' + stepNum + '"]');
+    if (!step) return true;
+    let valid = true;
+    // Text inputs
+    step.querySelectorAll('input[data-required="1"], textarea[data-required="1"]').forEach(inp => {
+      if (!inp.value.trim()) {
+        inp.classList.add('has-error');
+        valid = false;
+      } else {
+        inp.classList.remove('has-error');
+      }
+    });
+    // Yes/No groups, scale groups, chip groups
+    step.querySelectorAll('[data-required="1"][data-field]').forEach(group => {
+      if (group.classList.contains('yn-group') || group.classList.contains('scale-group') || group.classList.contains('chip-group')) {
+        if (!group.dataset.value) {
+          group.classList.add('has-error');
+          valid = false;
+        } else {
+          group.classList.remove('has-error');
+        }
+      }
+    });
+    // Validate conditional textareas: if parent yn-group says "Yes" AND conditional is shown
+    step.querySelectorAll('.conditional.show').forEach(cond => {
+      cond.querySelectorAll('input, textarea').forEach(inp => {
+        if (!inp.value.trim()) {
+          inp.classList.add('has-error');
+          valid = false;
+        }
+      });
+    });
+    return valid;
+  }
+
+  // Email format validation
+  function validateEmail(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  // Navigate to step
+  function goToStep(num) {
+    document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+    const target = document.querySelector('.step[data-step="' + num + '"]');
+    if (target) target.classList.add('active');
+    currentStep = num;
+    // Update progress
+    document.getElementById('progressFill').style.width = (num / TOTAL_STEPS * 100) + '%';
+    document.querySelector('.step-current').textContent = num;
+    document.getElementById('stepName').textContent = target.dataset.name;
+    // Button states
+    document.getElementById('btnBack').disabled = (num === 1);
+    if (num === TOTAL_STEPS) {
+      document.getElementById('btnNext').classList.add('hidden');
+      document.getElementById('btnSubmit').classList.add('show');
+    } else {
+      document.getElementById('btnNext').classList.remove('hidden');
+      document.getElementById('btnSubmit').classList.remove('show');
+    }
+    // Hide error
+    document.getElementById('errMsg').classList.remove('show');
+    // Scroll to top
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
+
+  // Next button
+  document.getElementById('btnNext').addEventListener('click', () => {
+    if (!validateStep(currentStep)) {
+      document.getElementById('errMsg').textContent = 'Please answer the required questions before continuing.';
+      document.getElementById('errMsg').classList.add('show');
+      return;
+    }
+    // Extra: validate email format on step 1
+    if (currentStep === 1) {
+      const email = document.getElementById('email').value.trim();
+      if (!validateEmail(email)) {
+        document.getElementById('email').classList.add('has-error');
+        document.getElementById('errMsg').textContent = 'Please enter a valid email address.';
+        document.getElementById('errMsg').classList.add('show');
+        return;
+      }
+    }
+    if (currentStep < TOTAL_STEPS) goToStep(currentStep + 1);
+  });
+
+  // Back button
+  document.getElementById('btnBack').addEventListener('click', () => {
+    if (currentStep > 1) goToStep(currentStep - 1);
+  });
+
+  // Build payload
+  function buildPayload() {
+    const data = {};
+    // Text inputs
+    document.querySelectorAll('input[data-field], textarea[data-field], select[data-field]').forEach(inp => {
+      data[inp.dataset.field] = inp.value.trim();
+    });
+    // Button groups (yn, scale, chip)
+    document.querySelectorAll('[data-field].yn-group, [data-field].scale-group, [data-field].chip-group').forEach(group => {
+      data[group.dataset.field] = group.dataset.value || '';
+    });
+    // Build full name
+    data.name = ((data.firstName || '') + ' ' + (data.lastName || '')).trim();
+    // Source tag
+    data.source = 'ECRN Stage 2 Application';
+    data.stage = 'Stage 2 Completed';
+    data.submittedAt = new Date().toISOString();
+
+    // Also build a clean readable "fullResponses" text dump for easy reading in GHL
+    const Q = (label, val) => val ? `${label}\n${val}\n\n` : '';
+    data.fullResponses =
+      `STAGE 2 APPLICATION — ${data.name}\n` +
+      `Email: ${data.email}\nPhone: ${data.phone || '(not provided)'}\n` +
+      `Submitted: ${data.submittedAt}\n` +
+      `\n========== LOCATION & AVAILABILITY ==========\n\n` +
+      Q('Q1. Located in Tampa Bay?', data.locatedTampaBay) +
+      Q('Q2. Able to work in-office several days/week?', data.canWorkInOffice) +
+      Q('Q3. Willing to travel to job sites?', data.canTravelJobSites) +
+      Q('Q18. Employment type seeking:', data.employmentType) +
+      Q('Q19. Available start date:', data.availableStartDate) +
+      `========== ON-CAMERA & BRAND READINESS ==========\n\n` +
+      Q('Q4. Comfortable being on camera / face of brand?', data.comfortableOnCamera) +
+      Q('Q5. Interview comfort level (1-5):', data.interviewComfort) +
+      Q('Q11. Comfortable on construction job sites?', data.comfortableJobSites) +
+      Q('Q12. Comfortable representing company publicly?', data.comfortablePublicBrand) +
+      `========== CONTENT EXPERIENCE ==========\n\n` +
+      Q('Q6. Filming experience for brands/UGC/ads?', data.contentExperience) +
+      Q('   Detail:', data.contentExperienceDetail) +
+      Q('Q7. Platforms created content for:', data.platforms) +
+      Q('Q8. Video editing experience?', data.videoEditing) +
+      Q('   Software/apps:', data.editingSoftware) +
+      Q('Q10. Content for biz growth/lead gen/recruiting/ads?', data.businessContentExp) +
+      Q('   Detail:', data.businessContentDetail) +
+      Q('Q15. AI tools experience?', data.aiToolsExp) +
+      Q('   Tools used:', data.aiToolsDetail) +
+      `========== PORTFOLIO & BACKGROUND ==========\n\n` +
+      Q('Q9. Portfolio links:', data.portfolioLinks) +
+      Q('Q13. Brand concerns to disclose:', data.brandConcerns) +
+      Q('Q14. Willing to do background check?', data.willingBackgroundCheck) +
+      `========== MOTIVATION & COMPENSATION ==========\n\n` +
+      Q('Q16. What interests you most:', data.whatInterests) +
+      Q('Q17. Income expectations:', data.incomeExpectations);
+
+    return data;
+  }
+
+  // Submit button
+  document.getElementById('btnSubmit').addEventListener('click', async () => {
+    if (!validateStep(currentStep)) {
+      document.getElementById('errMsg').textContent = 'Please answer the required questions before submitting.';
+      document.getElementById('errMsg').classList.add('show');
+      return;
+    }
+
+    const payload = buildPayload();
+
+    // Disable button + show submitting state
+    const btn = document.getElementById('btnSubmit');
+    btn.disabled = true;
+    btn.innerHTML = '<span class="spinner"></span> Submitting...';
+
+    try {
+      // Only attempt fetch if webhook URL is set
+      if (WEBHOOK_URL && WEBHOOK_URL !== 'STAGE2_WEBHOOK_URL_PLACEHOLDER') {
+        await fetch(WEBHOOK_URL, {
+          method: 'POST',
+          headers: {'Content-Type': 'application/json'},
+          body: JSON.stringify(payload)
+        });
+      } else {
+        console.warn('Stage 2 webhook URL not configured. Payload:', payload);
+        // Simulate brief delay for UX
+        await new Promise(r => setTimeout(r, 600));
+      }
+
+      // Fire Meta Pixel Lead event
+      if (typeof fbq === 'function') {
+        fbq('track', 'Lead', {content_name: 'ECRN Stage 2 Application'});
+      }
+
+      // Personalize success message
+      const successMsg = document.getElementById('successMsg');
+      if (payload.firstName) {
+        successMsg.textContent = `Thanks ${payload.firstName}. Our team is reviewing Stage 2 responses now and we'll reach out within 5–7 business days if it looks like a strong fit.`;
+      }
+
+      // Show success state
+      document.getElementById('appForm').style.display = 'none';
+      document.querySelector('.progress').style.display = 'none';
+      document.querySelector('.intro').style.display = 'none';
+      document.getElementById('successState').classList.add('show');
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    } catch (err) {
+      btn.disabled = false;
+      btn.innerHTML = 'Submit Application';
+      document.getElementById('errMsg').textContent = 'Something went wrong. Please try again, or email us directly.';
+      document.getElementById('errMsg').classList.add('show');
+      console.error(err);
+    }
+  });
+})();
+</script>
+</body>
+</html>
