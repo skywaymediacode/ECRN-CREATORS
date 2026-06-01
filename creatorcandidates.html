@@ -555,14 +555,19 @@ select.input{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://ww
     const targetId = prefillMap[key];
     if (targetId) {
       const el = document.getElementById(targetId);
-      if (el && val) el.value = decodeURIComponent(val);
+      const decoded = val ? decodeURIComponent(val) : '';
+      // Skip empty values and unreplaced GHL merge tokens like {{contact.first_name}}
+      if (el && decoded && !decoded.includes('{{')) el.value = decoded;
     }
   });
   // Handle "name" param specially - try to split into first/last
   if (urlParams.get('name') && !urlParams.get('firstName') && !urlParams.get('lastName')) {
-    const parts = decodeURIComponent(urlParams.get('name')).trim().split(/\s+/);
-    if (parts.length > 0) document.getElementById('firstName').value = parts[0];
-    if (parts.length > 1) document.getElementById('lastName').value = parts.slice(1).join(' ');
+    const rawName = decodeURIComponent(urlParams.get('name')).trim();
+    if (rawName && !rawName.includes('{{')) {
+      const parts = rawName.split(/\s+/);
+      if (parts.length > 0) document.getElementById('firstName').value = parts[0];
+      if (parts.length > 1) document.getElementById('lastName').value = parts.slice(1).join(' ');
+    }
   }
 
   // Yes/No button handling
